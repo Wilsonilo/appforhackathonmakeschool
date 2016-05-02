@@ -1,0 +1,6 @@
+framework module Pods_Wilson {
+  umbrella header "Pods-Wilson-umbrella.h"
+
+  export *
+  module * { export * }
+}

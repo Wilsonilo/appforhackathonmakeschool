@@ -33,8 +33,18 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>fonts/SF-UI-Display-Black.ttf</string>
+		<string>fonts/SF-UI-Display-Bold.ttf</string>
+		<string>fonts/SF-UI-Display-Heavy.ttf</string>
+		<string>fonts/SF-UI-Display-Light.ttf</string>
+		<string>fonts/SF-UI-Display-Medium.ttf</string>
+		<string>fonts/SF-UI-Display-Regular.ttf</string>
+		<string>fonts/SF-UI-Display-Semibold.ttf</string>
+		<string>fonts/SF-UI-Display-Thin.ttf</string>
+		<string>fonts/SF-UI-Display-Ultralight.ttf</string>
 	</array>
 </dict>
 </plist>
