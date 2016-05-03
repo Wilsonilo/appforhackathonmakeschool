@@ -22,6 +22,10 @@
 		C8A865881CD7FE1400CFCEC1 /* SF-UI-Display-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8A8657E1CD7FDE800CFCEC1 /* SF-UI-Display-Semibold.ttf */; };
 		C8A865891CD7FE1400CFCEC1 /* SF-UI-Display-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8A8657F1CD7FDE800CFCEC1 /* SF-UI-Display-Thin.ttf */; };
 		C8A8658A1CD7FE1400CFCEC1 /* SF-UI-Display-Ultralight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8A865801CD7FDE800CFCEC1 /* SF-UI-Display-Ultralight.ttf */; };
+		C8A8658C1CD8080300CFCEC1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A8658B1CD8080300CFCEC1 /* SignUpViewController.swift */; };
+		C8E1DD441CD831BB00C4910C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E1DD431CD831BB00C4910C /* Event.swift */; };
+		C8E1DD481CD8328000C4910C /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E1DD471CD8328000C4910C /* EventsTableViewController.swift */; };
+		C8E1DD4A1CD835CE00C4910C /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E1DD491CD835CE00C4910C /* EventTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		C8A8657E1CD7FDE800CFCEC1 /* SF-UI-Display-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Semibold.ttf"; sourceTree = "<group>"; };
 		C8A8657F1CD7FDE800CFCEC1 /* SF-UI-Display-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Thin.ttf"; sourceTree = "<group>"; };
 		C8A865801CD7FDE800CFCEC1 /* SF-UI-Display-Ultralight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Ultralight.ttf"; sourceTree = "<group>"; };
+		C8A8658B1CD8080300CFCEC1 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C8E1DD431CD831BB00C4910C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		C8E1DD471CD8328000C4910C /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		C8E1DD491CD835CE00C4910C /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,10 @@
 			children = (
 				C842909F1CD3984800A87EF5 /* AppDelegate.swift */,
 				C8A865741CD7FB2600CFCEC1 /* LoginViewController.swift */,
+				C8A8658B1CD8080300CFCEC1 /* SignUpViewController.swift */,
+				C8E1DD431CD831BB00C4910C /* Event.swift */,
+				C8E1DD471CD8328000C4910C /* EventsTableViewController.swift */,
+				C8E1DD491CD835CE00C4910C /* EventTableViewCell.swift */,
 				C84290A31CD3984800A87EF5 /* Main.storyboard */,
 				C8A865761CD7FDCC00CFCEC1 /* Assets.xcassets */,
 				C84290A81CD3984800A87EF5 /* LaunchScreen.storyboard */,
@@ -255,7 +267,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8E1DD4A1CD835CE00C4910C /* EventTableViewCell.swift in Sources */,
+				C8E1DD441CD831BB00C4910C /* Event.swift in Sources */,
+				C8A8658C1CD8080300CFCEC1 /* SignUpViewController.swift in Sources */,
 				C8A865751CD7FB2600CFCEC1 /* LoginViewController.swift in Sources */,
+				C8E1DD481CD8328000C4910C /* EventsTableViewController.swift in Sources */,
 				C84290A01CD3984800A87EF5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,11 +386,16 @@
 			baseConfigurationReference = 4403AC1EC76928013F8F5965 /* Pods-Wilson.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Wilson/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PODS_ROOT = "${SRCROOT}/Pods/";
 				PRODUCT_BUNDLE_IDENTIFIER = net.wilsonmunoz.Wilson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -383,11 +404,15 @@
 			baseConfigurationReference = 6B4F731E9DBB68A45A939C06 /* Pods-Wilson.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Wilson/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PODS_ROOT = "${SRCROOT}/Pods/";
 				PRODUCT_BUNDLE_IDENTIFIER = net.wilsonmunoz.Wilson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

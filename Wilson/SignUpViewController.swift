@@ -1,37 +1,30 @@
 //
-//  LoginViewController.swift
-//  
+//  SignUpViewController.swift
+//  Wilson
 //
 //  Created by Wilson Muñoz on 5/2/16.
-//
+//  Copyright © 2016 Wilson Muñoz. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController {
+class SignUpViewController: UIViewController {
     
-    //Vars
-    let appusers    =    Firebase(url:  "https://wilsonapp.firebaseio.com");
 
-    
-    //Outlets
     @IBOutlet weak var InputEmail: UITextField!
     @IBOutlet weak var InputPassword: UITextField!
-    @IBOutlet weak var ButtonSignIn: UIButton!
-    
-    
-    //Did Load
+    @IBOutlet weak var SignUpButtonInside: UIButton!
     override func viewDidLoad() {
-        super.viewDidLoad()
-
         
+        
+        super.viewDidLoad()
         //Set Radius to Button
-        ButtonSignIn.layer.cornerRadius = 20
-        ButtonSignIn.clipsToBounds = true
+        SignUpButtonInside.layer.cornerRadius = 20
+        SignUpButtonInside.clipsToBounds = true
+
 
     }
-    
     
     //Did Layout Subviews
     override func viewDidLayoutSubviews(){
@@ -51,14 +44,7 @@ class LoginViewController: UIViewController {
         InputEmail.layer.masksToBounds = true
         InputPassword.layer.addSublayer(borderPassword)
         InputPassword.layer.masksToBounds = true
-    
-    }
-    
-    //Did Appeared
-    override func viewDidAppear(animated: Bool) {
         
-        //Hide Navigation Bar
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,24 +52,21 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    //Sign In
-    @IBAction func SignIn(sender: AnyObject) {
+    @IBAction func SignUp(sender: AnyObject) {
+        print(InputEmail.text)
+        print(InputPassword.text)
+        let app = Firebase(url: "https://wilsonapp.firebaseio.com")
+        app.createUser(InputEmail.text, password: InputPassword.text,
+           withValueCompletionBlock: { error, result in
+            if error != nil {
+                // There was an error creating the account
+            } else {
+                let uid = result["uid"] as? String
+                print("Successfully created user account with uid: \(uid)")
+            }
         
-
-        appusers.authUser(InputEmail.text, password: InputPassword.text,
-                     withCompletionBlock: { error, authData in
-                        if error != nil {
-                            
-                            print("No user");
-                            
-                        } else {
-                        
-                            print("All Good");
-                            
-                        }
         })
-    
+        
     }
-    
+
 }
