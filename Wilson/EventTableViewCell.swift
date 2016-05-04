@@ -13,7 +13,8 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var AddressLabel: UILabel!
     @IBOutlet weak var urlLabel: UILabel!
-    
+    @IBOutlet weak var imageCell: UIImageView!
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

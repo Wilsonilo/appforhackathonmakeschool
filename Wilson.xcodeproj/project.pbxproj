@@ -390,6 +390,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Wilson/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PODS_ROOT = "${SRCROOT}/Pods/";
 				PRODUCT_BUNDLE_IDENTIFIER = net.wilsonmunoz.Wilson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -408,6 +409,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Wilson/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PODS_ROOT = "${SRCROOT}/Pods/";
 				PRODUCT_BUNDLE_IDENTIFIER = net.wilsonmunoz.Wilson;
 				PRODUCT_NAME = "$(TARGET_NAME)";

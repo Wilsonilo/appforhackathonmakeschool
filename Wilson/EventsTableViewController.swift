@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import SDWebImage
 
 class EventsTableViewController: UITableViewController {
     
     //http://api.eventful.com/json/events/search?location=Cancun&app_key=tMPDGBjnXGVq87jZ
     
-    let eventsURL = "http://api.eventful.com/json/events/search?location=Cancun&app_key=tMPDGBjnXGVq87jZ"
+    let eventsURL = "http://api.eventful.com/json/events/search?location=San+Francisco&app_key=tMPDGBjnXGVq87jZ"
     var events = [Event]()
 
 
@@ -46,6 +47,18 @@ class EventsTableViewController: UITableViewController {
         cell.titleLabel.text = events[indexPath.row].name
         cell.AddressLabel.text = events[indexPath.row].address
         cell.urlLabel.text = events[indexPath.row].url
+        //Declare the url and placeholder
+        if let url  = NSURL(string:events[indexPath.row].image) {
+            let img = UIImage(named: "photoalbum.png")
+            cell.imageCell.sd_setImageWithURL(url, placeholderImage: img) {
+                (img, err, cacheType, imgUrl) -> Void in
+            }
+            cell.imageCell.clipsToBounds = true
+            cell.imageCell.layer.cornerRadius =  cell.imageCell.frame.size.width / 2;
+            cell.imageCell.layer.opacity = 1.0
+        }
+        
+        //cell.imageCell.
 
         //cell.amountLabel.text = "$\(loans[indexPath.row].amount)"
         return cell
@@ -86,11 +99,23 @@ class EventsTableViewController: UITableViewController {
             for jsonEvent in jsonEvents {
                 let event = Event()
                 event.name = jsonEvent["title"] as! String
-                event.url = jsonEvent["url"] as! String
+                event.url = jsonEvent["region_name"] as! String
+                
+                //Check if we have images in this event
+                if let image = jsonEvent["image"]  {
+                    
+                    if (image!["medium"] != nil) {
+                        
+                        event.image = image!["medium"]!!["url"] as! String
+                    
+                    }
+                
+                }
+
                 //if there is no image need to add placeholder
                 //let image = jsonEvent["image"] as! [String:AnyObject]
                 //event.image = image["medium"] as! String
-                event.address = jsonEvent["olson_path"] as! String
+                event.address = jsonEvent["city_name"] as! String
                 events.append(event)
             }
         } catch {
