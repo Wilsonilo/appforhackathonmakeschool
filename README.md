@@ -1,5 +1,8 @@
 # WilsonApp
 
+![alt tag](https://cloud.githubusercontent.com/assets/2402695/15016604/94c6538a-11d7-11e6-99e8-ab39fcbf698d.png)
+
+
 Prototype of the app, follow instructions to use the app:
 
 1. Download Xcode: https://developer.apple.com/xcode/download/
