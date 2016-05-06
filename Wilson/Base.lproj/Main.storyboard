@@ -6,6 +6,9 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="SF-UI-Display-Heavy.ttf">
+            <string>SFUIDisplay-Heavy</string>
+        </mutableArray>
         <mutableArray key="SF-UI-Display-Light.ttf">
             <string>SFUIDisplay-Light</string>
             <string>SFUIDisplay-Light</string>
@@ -14,7 +17,17 @@
             <string>SFUIDisplay-Light</string>
             <string>SFUIDisplay-Light</string>
         </mutableArray>
+        <mutableArray key="SF-UI-Display-Medium.ttf">
+            <string>SFUIDisplay-Medium</string>
+            <string>SFUIDisplay-Medium</string>
+            <string>SFUIDisplay-Medium</string>
+        </mutableArray>
         <mutableArray key="SF-UI-Display-Regular.ttf">
+            <string>SFUIDisplay-Regular</string>
+            <string>SFUIDisplay-Regular</string>
+            <string>SFUIDisplay-Regular</string>
+            <string>SFUIDisplay-Regular</string>
+            <string>SFUIDisplay-Regular</string>
             <string>SFUIDisplay-Regular</string>
             <string>SFUIDisplay-Regular</string>
             <string>SFUIDisplay-Regular</string>
@@ -260,6 +273,7 @@
                                     <outlet property="imageCell" destination="bDB-rT-hYD" id="Dn1-yW-nYb"/>
                                     <outlet property="titleLabel" destination="qMn-tb-M2f" id="hwC-cy-Yyx"/>
                                     <outlet property="urlLabel" destination="1b3-zb-jMb" id="6IX-z8-eIh"/>
+                                    <segue destination="MYF-JU-dvH" kind="show" identifier="verEvento" id="N9p-Wc-H76"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -272,6 +286,290 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XlR-e8-atd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2096" y="479"/>
+        </scene>
+        <!--Detalle Table View Controller-->
+        <scene sceneID="slB-6s-aHz">
+            <objects>
+                <viewController id="MYF-JU-dvH" customClass="DetalleTableViewController" customModule="Wilson" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zhj-Rh-avC"/>
+                        <viewControllerLayoutGuide type="bottom" id="6nn-tg-ezO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cD9-KH-mP4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WD4-eP-CLl">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGj-F1-mbO">
+                                        <rect key="frame" x="10" y="23" width="14" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="14" id="7WB-Gi-lXH"/>
+                                            <constraint firstAttribute="height" constant="25" id="Jcq-gP-6HJ"/>
+                                        </constraints>
+                                        <state key="normal" image="previous"/>
+                                        <connections>
+                                            <segue destination="HMO-i8-oKz" kind="show" id="ogT-83-hAH"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the Event" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85P-Rv-4TL">
+                                        <rect key="frame" x="210" y="24" width="180" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="4GA-ZW-Pzt"/>
+                                            <constraint firstAttribute="width" constant="180" id="LfT-jH-8a5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.39822776850000002" green="0.3222525168" blue="0.5865929111" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="tGj-F1-mbO" firstAttribute="leading" secondItem="WD4-eP-CLl" secondAttribute="leading" constant="10" id="2DM-vx-tKM"/>
+                                    <constraint firstAttribute="height" constant="70" id="Cw2-1H-EEh"/>
+                                    <constraint firstItem="85P-Rv-4TL" firstAttribute="centerX" secondItem="WD4-eP-CLl" secondAttribute="centerX" id="Z26-YN-fPC"/>
+                                    <constraint firstItem="tGj-F1-mbO" firstAttribute="centerX" secondItem="WD4-eP-CLl" secondAttribute="centerX" id="uKM-ed-5Ds"/>
+                                    <constraint firstItem="85P-Rv-4TL" firstAttribute="centerY" secondItem="WD4-eP-CLl" secondAttribute="centerY" id="vLN-qS-jLL"/>
+                                    <constraint firstItem="tGj-F1-mbO" firstAttribute="centerY" secondItem="WD4-eP-CLl" secondAttribute="centerY" id="vTx-QU-6Y7"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="uKM-ed-5Ds"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qo2-XR-VMB">
+                                <rect key="frame" x="0.0" y="70" width="600" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Francisco" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Glw-QD-6ZV">
+                                        <rect key="frame" x="448" y="19" width="144" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="144" id="rvP-qL-joi"/>
+                                            <constraint firstAttribute="height" constant="21" id="wH0-7h-93e"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="17"/>
+                                        <color key="textColor" red="0.40784313725490196" green="0.38039215686274508" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfH-VS-Bvz">
+                                        <rect key="frame" x="8" y="-1" width="230" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="230" id="S6Y-EZ-rpO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Heavy" family="SF UI Display" pointSize="60"/>
+                                        <color key="textColor" red="0.50196078431372548" green="0.30588235294117649" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="California" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCa-VF-6aY">
+                                        <rect key="frame" x="448" y="40" width="144" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="aSc-yl-gdu"/>
+                                            <constraint firstAttribute="width" constant="144" id="ohJ-OZ-Btd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="17"/>
+                                        <color key="textColor" red="0.40784313729999999" green="0.3803921569" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="oCa-VF-6aY" firstAttribute="top" secondItem="Glw-QD-6ZV" secondAttribute="bottom" id="1R4-lY-Fwz"/>
+                                    <constraint firstItem="Glw-QD-6ZV" firstAttribute="top" secondItem="Qo2-XR-VMB" secondAttribute="top" constant="19" id="2Um-7P-okb"/>
+                                    <constraint firstItem="TfH-VS-Bvz" firstAttribute="leading" secondItem="Qo2-XR-VMB" secondAttribute="leading" constant="8" id="2wB-iT-yQd"/>
+                                    <constraint firstItem="TfH-VS-Bvz" firstAttribute="centerY" secondItem="Qo2-XR-VMB" secondAttribute="centerY" id="92g-b3-Ke0"/>
+                                    <constraint firstAttribute="height" constant="70" id="YxO-uM-MRG"/>
+                                    <constraint firstAttribute="trailing" secondItem="oCa-VF-6aY" secondAttribute="trailing" constant="8" id="e4n-Ya-Q7T"/>
+                                    <constraint firstAttribute="trailing" secondItem="Glw-QD-6ZV" secondAttribute="trailing" constant="8" id="hPX-1p-osk"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Mv-iL-m0m">
+                                <rect key="frame" x="20" y="542" width="155" height="38"/>
+                                <color key="backgroundColor" red="0.82352941180000006" green="0.1647058824" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Add Photo to Stream">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="O9L-F4-Svh" kind="show" id="7JY-Mg-vxn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxR-nA-UWI">
+                                <rect key="frame" x="461" y="542" width="119" height="38"/>
+                                <color key="backgroundColor" red="0.82352941176470584" green="0.16470588235294117" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="See All Photos">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6rS-Nc-d85">
+                                <rect key="frame" x="0.0" y="140" width="600" height="227"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="227" id="8K5-6g-6NP"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6rS-Nc-d85" secondAttribute="trailing" id="2mG-SV-fda"/>
+                            <constraint firstItem="6rS-Nc-d85" firstAttribute="top" secondItem="Qo2-XR-VMB" secondAttribute="bottom" id="6cd-VG-Pob"/>
+                            <constraint firstAttribute="trailing" secondItem="Qo2-XR-VMB" secondAttribute="trailing" id="EU1-nl-Qp5"/>
+                            <constraint firstItem="bxR-nA-UWI" firstAttribute="trailing" secondItem="cD9-KH-mP4" secondAttribute="trailingMargin" id="IPx-W0-2Eh"/>
+                            <constraint firstAttribute="trailing" secondItem="WD4-eP-CLl" secondAttribute="trailing" id="Qv4-DN-dQ8"/>
+                            <constraint firstItem="WD4-eP-CLl" firstAttribute="top" secondItem="cD9-KH-mP4" secondAttribute="top" id="cDp-ML-6tq"/>
+                            <constraint firstItem="6nn-tg-ezO" firstAttribute="top" secondItem="bxR-nA-UWI" secondAttribute="bottom" constant="20" id="gC0-86-Q8v"/>
+                            <constraint firstItem="6nn-tg-ezO" firstAttribute="top" secondItem="1Mv-iL-m0m" secondAttribute="bottom" constant="20" id="pfY-O3-zd8"/>
+                            <constraint firstItem="Qo2-XR-VMB" firstAttribute="leading" secondItem="cD9-KH-mP4" secondAttribute="leading" id="r30-yM-Wkf"/>
+                            <constraint firstItem="WD4-eP-CLl" firstAttribute="leading" secondItem="cD9-KH-mP4" secondAttribute="leading" id="rHC-h9-7RD"/>
+                            <constraint firstItem="6rS-Nc-d85" firstAttribute="leading" secondItem="cD9-KH-mP4" secondAttribute="leading" id="tBW-UZ-eZj"/>
+                            <constraint firstItem="Qo2-XR-VMB" firstAttribute="top" secondItem="WD4-eP-CLl" secondAttribute="bottom" id="zK7-h4-xGZ"/>
+                            <constraint firstItem="1Mv-iL-m0m" firstAttribute="leading" secondItem="cD9-KH-mP4" secondAttribute="leadingMargin" id="zvB-nH-Gw8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="AddPhotoButton" destination="1Mv-iL-m0m" id="a02-dc-LDh"/>
+                        <outlet property="EventInfoView" destination="Qo2-XR-VMB" id="rtq-hr-omq"/>
+                        <outlet property="LabelCity" destination="Glw-QD-6ZV" id="2r6-Qu-tif"/>
+                        <outlet property="LabelName" destination="TfH-VS-Bvz" id="rGH-ul-RCP"/>
+                        <outlet property="LabelState" destination="oCa-VF-6aY" id="8ee-od-tIj"/>
+                        <outlet property="MainImageView" destination="6rS-Nc-d85" id="VaA-Bq-D9b"/>
+                        <outlet property="NameOfEventTop" destination="85P-Rv-4TL" id="boM-oM-J05"/>
+                        <outlet property="NavigationBarView" destination="WD4-eP-CLl" id="smk-Tk-9az"/>
+                        <outlet property="SeeAllPhotosButton" destination="bxR-nA-UWI" id="zZd-2g-QW4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iPM-1U-Wjp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2805" y="479"/>
+        </scene>
+        <!--Buttons Photos View Controller-->
+        <scene sceneID="0up-bZ-4Q5">
+            <objects>
+                <viewController id="O9L-F4-Svh" customClass="ButtonsPhotosViewController" customModule="Wilson" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nI0-MQ-Qpo"/>
+                        <viewControllerLayoutGuide type="bottom" id="9FO-lP-fph"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pTk-oR-eOi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ur-VL-agH">
+                                <rect key="frame" x="200" y="287" width="200" height="38"/>
+                                <color key="backgroundColor" red="0.82352941180000006" green="0.1647058824" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="elS-Zd-a5F"/>
+                                    <constraint firstAttribute="width" constant="200" id="gd1-GQ-eL4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Select Photo from Library">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOP-aa-Us8">
+                                <rect key="frame" x="200" y="224" width="200" height="38"/>
+                                <color key="backgroundColor" red="0.82352941180000006" green="0.1647058824" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="qu5-Bt-F3v"/>
+                                    <constraint firstAttribute="height" constant="38" id="ug2-KL-CSc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Take Photo">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Eqs-Ef-GHM" kind="show" id="34U-WB-9Ko"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2ur-VL-agH" firstAttribute="centerX" secondItem="pTk-oR-eOi" secondAttribute="centerX" id="GX5-rb-pK0"/>
+                            <constraint firstItem="eOP-aa-Us8" firstAttribute="centerX" secondItem="pTk-oR-eOi" secondAttribute="centerX" id="I29-0J-CeH"/>
+                            <constraint firstItem="eOP-aa-Us8" firstAttribute="top" secondItem="nI0-MQ-Qpo" secondAttribute="bottom" constant="204" id="JIs-Ot-VcJ"/>
+                            <constraint firstItem="eOP-aa-Us8" firstAttribute="centerY" secondItem="pTk-oR-eOi" secondAttribute="centerY" id="JcX-Ef-O0e"/>
+                            <constraint firstItem="2ur-VL-agH" firstAttribute="top" secondItem="eOP-aa-Us8" secondAttribute="bottom" constant="25" id="Tx0-jH-HZP"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JcX-Ef-O0e"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r0b-2C-ML0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3463" y="-309"/>
+        </scene>
+        <!--Take Photo View Controller-->
+        <scene sceneID="Upk-ZT-syQ">
+            <objects>
+                <viewController id="Eqs-Ef-GHM" customClass="TakePhotoViewController" customModule="Wilson" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hYh-Pd-zUY"/>
+                        <viewControllerLayoutGuide type="bottom" id="q8y-GD-vdb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VKN-pZ-8N8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67b-Xq-est">
+                                <rect key="frame" x="200" y="542" width="200" height="38"/>
+                                <color key="backgroundColor" red="0.82352941180000006" green="0.1647058824" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="GXo-MP-cWQ"/>
+                                    <constraint firstAttribute="height" constant="38" id="cyE-DJ-mGy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Add Photo to Stream">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="SendPhotoToStream:" destination="Eqs-Ef-GHM" eventType="touchUpInside" id="U7O-wX-xoD"/>
+                                </connections>
+                            </button>
+                            <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoalbum" translatesAutoresizingMaskIntoConstraints="NO" id="9Hq-w1-OCe">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="534"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="KWR-SS-Ax9" appends="YES" id="9U9-GN-PaJ"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9Hq-w1-OCe" secondAttribute="trailing" id="2QT-NP-fKp"/>
+                            <constraint firstItem="q8y-GD-vdb" firstAttribute="top" secondItem="67b-Xq-est" secondAttribute="bottom" constant="20" id="3Iy-XY-BNz"/>
+                            <constraint firstItem="9Hq-w1-OCe" firstAttribute="top" secondItem="VKN-pZ-8N8" secondAttribute="top" id="ETV-Pf-ojO"/>
+                            <constraint firstItem="9Hq-w1-OCe" firstAttribute="leading" secondItem="VKN-pZ-8N8" secondAttribute="leading" id="ZOB-iA-Cx9"/>
+                            <constraint firstItem="67b-Xq-est" firstAttribute="centerX" secondItem="VKN-pZ-8N8" secondAttribute="centerX" id="dgB-2v-sYO"/>
+                            <constraint firstItem="q8y-GD-vdb" firstAttribute="top" secondItem="9Hq-w1-OCe" secondAttribute="bottom" id="k8v-gr-3uV"/>
+                            <constraint firstItem="67b-Xq-est" firstAttribute="top" secondItem="9Hq-w1-OCe" secondAttribute="bottom" constant="8" id="owY-Am-A6V"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="k8v-gr-3uV"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="ButtonUsePhoto" destination="67b-Xq-est" id="3QA-75-sSW"/>
+                        <outlet property="ImagePicked" destination="9Hq-w1-OCe" id="I8N-0p-hqT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tMR-wS-O9M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="KWR-SS-Ax9">
+                    <connections>
+                        <action selector="openCameraButton:" destination="Eqs-Ef-GHM" id="fJo-Pc-NZa"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="4130" y="-309"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="ZuH-hd-YzK">
@@ -421,7 +719,11 @@
         <image name="background-login" width="750" height="1334"/>
         <image name="background-signup" width="750" height="1334"/>
         <image name="password-icon" width="40" height="46"/>
+        <image name="photoalbum" width="84" height="84"/>
         <image name="previous" width="34" height="60"/>
         <image name="user-icon" width="44" height="44"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ogT-83-hAH"/>
+    </inferredMetricsTieBreakers>
 </document>

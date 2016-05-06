@@ -11,8 +11,6 @@ import SDWebImage
 
 class EventsTableViewController: UITableViewController {
     
-    //http://api.eventful.com/json/events/search?location=Cancun&app_key=tMPDGBjnXGVq87jZ
-    
     let eventsURL = "http://api.eventful.com/json/events/search?location=San+Francisco&app_key=tMPDGBjnXGVq87jZ"
     var events = [Event]()
 
@@ -112,9 +110,6 @@ class EventsTableViewController: UITableViewController {
                 
                 }
 
-                //if there is no image need to add placeholder
-                //let image = jsonEvent["image"] as! [String:AnyObject]
-                //event.image = image["medium"] as! String
                 event.address = jsonEvent["city_name"] as! String
                 events.append(event)
             }
@@ -122,6 +117,23 @@ class EventsTableViewController: UITableViewController {
             print(error)
         }
         return events
+    }
+    
+    // MARK: Prepare for Segue
+    //Reescribimos el PrepareforSegue para enviar Información
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "verEvento" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let destinationController = segue.destinationViewController as! DetalleTableViewController
+                
+                //Send data to Single View
+                destinationController.EventName = events[indexPath.row].name
+                destinationController.EventCity = events[indexPath.row].address
+                destinationController.EventRegion = events[indexPath.row].url
+                destinationController.EventImageUrl = events[indexPath.row].image
+                
+            }
+        }
     }
 
 
