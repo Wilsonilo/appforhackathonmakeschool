@@ -7,11 +7,60 @@
 //
 
 import UIKit
+import Firebase
 
-class ButtonsPhotosViewController: UIViewController {
+class ButtonsPhotosViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    //var ImageForLibrary:UIImage = UIImage(named: "")!
+    //ar ImageFromLibrary = UIImageView(image: ImageForLibrary!)
+    
+  //let ImageFromLibrary = UIImageView(image: UIImage(named: "")!)
+    var myImage : UIImage!
 
+
+    @IBAction func SelectPhotoFromLibrary(sender: AnyObject) {
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary;
+            imagePicker.allowsEditing = false
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        }
+    
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        
+        //let ImageFromLibrary = UIImageView(image: image)
+        self.myImage = image
+        if(self.myImage != nil){
+            
+            //self.dismissViewControllerAnimated(true, completion: nil);
+            dismissViewControllerAnimated(true, completion: { () -> Void in
+                self.performSegueWithIdentifier("PhotoLibrarySegue", sender: self)
+            })
+        
+        } else {
+        
+            print("i get nil on the image")
+        
+        }
+    }
+    
+    //Reescribimos el PrepareforSegue para enviar Información
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "PhotoLibrarySegue" {
+            let destinationController = segue.destinationViewController as! TakePhotoViewController
+            
+                destinationController.myImage = myImage
+
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }
@@ -21,15 +70,5 @@ class ButtonsPhotosViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

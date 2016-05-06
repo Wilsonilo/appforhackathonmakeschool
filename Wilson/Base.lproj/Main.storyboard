@@ -213,8 +213,8 @@
                                                 <constraint firstAttribute="height" constant="110" id="jCs-4j-XaU"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Address" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjU-ps-Y2p">
-                                            <rect key="frame" x="136" y="86" width="456" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjU-ps-Y2p">
+                                            <rect key="frame" x="118" y="106" width="474" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="g15-OV-Ege"/>
                                             </constraints>
@@ -222,8 +222,8 @@
                                             <color key="textColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Region Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1b3-zb-jMb">
-                                            <rect key="frame" x="128" y="106" width="464" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1b3-zb-jMb">
+                                            <rect key="frame" x="110" y="126" width="482" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="DpG-np-IfD"/>
                                             </constraints>
@@ -395,14 +395,17 @@
                                     <segue destination="O9L-F4-Svh" kind="show" id="7JY-Mg-vxn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxR-nA-UWI">
-                                <rect key="frame" x="461" y="542" width="119" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxR-nA-UWI">
+                                <rect key="frame" x="464" y="542" width="116" height="38"/>
                                 <color key="backgroundColor" red="0.82352941176470584" green="0.16470588235294117" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="15"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <state key="normal" title="See All Photos">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="mvu-cV-QEk" kind="show" id="ckE-Sn-pTJ"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6rS-Nc-d85">
                                 <rect key="frame" x="0.0" y="140" width="600" height="227"/>
@@ -444,6 +447,54 @@
             </objects>
             <point key="canvasLocation" x="2805" y="479"/>
         </scene>
+        <!--Stream Collection View Controller-->
+        <scene sceneID="8Ib-KU-PoW">
+            <objects>
+                <collectionViewController id="mvu-cV-QEk" customClass="StreamCollectionViewController" customModule="Wilson" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="NvL-II-4Mz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yEV-mF-fgR">
+                            <size key="itemSize" width="150" height="150"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="38B-zz-Fl5" customClass="StreamCollectionViewCell" customModule="Wilson" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6cK-a4-nct">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="6cK-a4-nct" firstAttribute="centerX" secondItem="38B-zz-Fl5" secondAttribute="centerX" id="1oI-e4-hn3"/>
+                                    <constraint firstItem="6cK-a4-nct" firstAttribute="centerY" secondItem="38B-zz-Fl5" secondAttribute="centerY" id="9VV-8Q-Z3I"/>
+                                    <constraint firstItem="6cK-a4-nct" firstAttribute="height" secondItem="38B-zz-Fl5" secondAttribute="height" id="ggF-9y-Vnd"/>
+                                    <constraint firstItem="6cK-a4-nct" firstAttribute="width" secondItem="38B-zz-Fl5" secondAttribute="width" id="s7c-Mi-vSK"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="ImageStream" destination="6cK-a4-nct" id="WR2-wb-hQN"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="mvu-cV-QEk" id="VAr-Bn-qcn"/>
+                            <outlet property="delegate" destination="mvu-cV-QEk" id="OB2-Lm-3nc"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ovx-OE-nzG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3485" y="479"/>
+        </scene>
         <!--Buttons Photos View Controller-->
         <scene sceneID="0up-bZ-4Q5">
             <objects>
@@ -468,6 +519,9 @@
                                 <state key="normal" title="Select Photo from Library">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="SelectPhotoFromLibrary:" destination="O9L-F4-Svh" eventType="touchUpInside" id="CfA-ta-55A"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOP-aa-Us8">
                                 <rect key="frame" x="200" y="224" width="200" height="38"/>
@@ -482,7 +536,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Eqs-Ef-GHM" kind="show" id="34U-WB-9Ko"/>
+                                    <segue destination="Eqs-Ef-GHM" kind="show" identifier="TakePhotoSegue" id="34U-WB-9Ko"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -500,6 +554,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <segue destination="Eqs-Ef-GHM" kind="show" identifier="PhotoLibrarySegue" id="coF-Da-O2P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r0b-2C-ML0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -725,5 +782,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ogT-83-hAH"/>
+        <segue reference="coF-Da-O2P"/>
     </inferredMetricsTieBreakers>
 </document>

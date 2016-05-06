@@ -9,12 +9,12 @@
 import UIKit
 import Firebase
 
-class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
-UINavigationControllerDelegate {
+class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     //Var Images
-    let images    =    Firebase(url:  "https://wilsonapp.firebaseio.com/images");
-    var base64String: NSString!
+    let images          =   Firebase(url:  "https://wilsonapp.firebaseio.com");
+    var base64String:       NSString!
+    var myImage : UIImage!
     
     //Outlets
     @IBOutlet weak var ButtonUsePhoto: UIButton!
@@ -82,8 +82,17 @@ UINavigationControllerDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        ButtonUsePhoto.hidden = true
-        // Do any additional setup after loading the view.
+        if ImagePicked != nil {
+            
+            ImagePicked.image = myImage
+            ImagePicked.contentMode = .ScaleAspectFit
+            ButtonUsePhoto.hidden = false
+       
+        } else {
+        
+            ButtonUsePhoto.hidden = true
+        
+        }
     }
 
     override func didReceiveMemoryWarning() {

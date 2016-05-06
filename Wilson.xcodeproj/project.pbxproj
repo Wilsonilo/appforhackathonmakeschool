@@ -11,6 +11,10 @@
 		C84290A01CD3984800A87EF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C842909F1CD3984800A87EF5 /* AppDelegate.swift */; };
 		C84290A51CD3984800A87EF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84290A31CD3984800A87EF5 /* Main.storyboard */; };
 		C84290AA1CD3984800A87EF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84290A81CD3984800A87EF5 /* LaunchScreen.storyboard */; };
+		C873F1771CDCE4B00024EA72 /* StreamCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873F1761CDCE4B00024EA72 /* StreamCollectionViewController.swift */; };
+		C873F17A1CDCE6870024EA72 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873F1781CDCE6870024EA72 /* Contants.swift */; };
+		C873F17B1CDCE6870024EA72 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873F1791CDCE6870024EA72 /* DataService.swift */; };
+		C873F17D1CDCE9B60024EA72 /* StreamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873F17C1CDCE9B60024EA72 /* StreamCollectionViewCell.swift */; };
 		C8A865751CD7FB2600CFCEC1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A865741CD7FB2600CFCEC1 /* LoginViewController.swift */; };
 		C8A865771CD7FDCC00CFCEC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8A865761CD7FDCC00CFCEC1 /* Assets.xcassets */; };
 		C8A865821CD7FE1400CFCEC1 /* SF-UI-Display-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8A865781CD7FDE800CFCEC1 /* SF-UI-Display-Black.ttf */; };
@@ -40,6 +44,10 @@
 		C84290A41CD3984800A87EF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C84290A91CD3984800A87EF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C84290AB1CD3984800A87EF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C873F1761CDCE4B00024EA72 /* StreamCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamCollectionViewController.swift; sourceTree = "<group>"; };
+		C873F1781CDCE6870024EA72 /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
+		C873F1791CDCE6870024EA72 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		C873F17C1CDCE9B60024EA72 /* StreamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamCollectionViewCell.swift; sourceTree = "<group>"; };
 		C8A865741CD7FB2600CFCEC1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C8A865761CD7FDCC00CFCEC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8A865781CD7FDE800CFCEC1 /* SF-UI-Display-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Black.ttf"; sourceTree = "<group>"; };
@@ -113,6 +121,8 @@
 			children = (
 				C84290A31CD3984800A87EF5 /* Main.storyboard */,
 				C842909F1CD3984800A87EF5 /* AppDelegate.swift */,
+				C873F1781CDCE6870024EA72 /* Contants.swift */,
+				C873F1791CDCE6870024EA72 /* DataService.swift */,
 				C8A865741CD7FB2600CFCEC1 /* LoginViewController.swift */,
 				C8A8658B1CD8080300CFCEC1 /* SignUpViewController.swift */,
 				C8E1DD431CD831BB00C4910C /* Event.swift */,
@@ -121,6 +131,8 @@
 				C8C5CE8F1CDC13D4003A6755 /* DetalleTableViewController.swift */,
 				C8C5CE911CDC3235003A6755 /* ButtonsPhotosViewController.swift */,
 				C8C5CE931CDC3241003A6755 /* TakePhotoViewController.swift */,
+				C873F1761CDCE4B00024EA72 /* StreamCollectionViewController.swift */,
+				C873F17C1CDCE9B60024EA72 /* StreamCollectionViewCell.swift */,
 				C84290A81CD3984800A87EF5 /* LaunchScreen.storyboard */,
 				C8A865761CD7FDCC00CFCEC1 /* Assets.xcassets */,
 				C84290AB1CD3984800A87EF5 /* Info.plist */,
@@ -279,11 +291,15 @@
 				C8E1DD4A1CD835CE00C4910C /* EventTableViewCell.swift in Sources */,
 				C8C5CE901CDC13D4003A6755 /* DetalleTableViewController.swift in Sources */,
 				C8E1DD441CD831BB00C4910C /* Event.swift in Sources */,
+				C873F17B1CDCE6870024EA72 /* DataService.swift in Sources */,
 				C8A8658C1CD8080300CFCEC1 /* SignUpViewController.swift in Sources */,
 				C8C5CE941CDC3242003A6755 /* TakePhotoViewController.swift in Sources */,
+				C873F17D1CDCE9B60024EA72 /* StreamCollectionViewCell.swift in Sources */,
 				C8A865751CD7FB2600CFCEC1 /* LoginViewController.swift in Sources */,
+				C873F1771CDCE4B00024EA72 /* StreamCollectionViewController.swift in Sources */,
 				C8C5CE921CDC3235003A6755 /* ButtonsPhotosViewController.swift in Sources */,
 				C8E1DD481CD8328000C4910C /* EventsTableViewController.swift in Sources */,
+				C873F17A1CDCE6870024EA72 /* Contants.swift in Sources */,
 				C84290A01CD3984800A87EF5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
