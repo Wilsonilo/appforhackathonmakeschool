@@ -617,6 +617,7 @@
                     <connections>
                         <outlet property="ButtonUsePhoto" destination="67b-Xq-est" id="3QA-75-sSW"/>
                         <outlet property="ImagePicked" destination="9Hq-w1-OCe" id="I8N-0p-hqT"/>
+                        <segue destination="mvu-cV-QEk" kind="show" identifier="goToStream" id="MIc-cH-iM4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMR-wS-O9M" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -783,5 +784,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="ogT-83-hAH"/>
         <segue reference="coF-Da-O2P"/>
+        <segue reference="MIc-cH-iM4"/>
     </inferredMetricsTieBreakers>
 </document>

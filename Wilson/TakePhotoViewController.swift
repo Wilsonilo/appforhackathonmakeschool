@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import SwiftSpinner
+
 
 class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -45,7 +47,8 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
     //User uses image
     @IBAction func SendPhotoToStream(sender: AnyObject) {
         
-        
+        SwiftSpinner.show("Sending Image to Stream Baby!...")
+
         let imageData = UIImageJPEGRepresentation(ImagePicked.image!, 0.8)
         //let compressedJPGImage = UIImage(data: imageData!)
         self.base64String = imageData?.base64EncodedStringWithOptions([])
@@ -54,22 +57,37 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
         let users = ["image": quoteString]
         userRef.setValue(users, withCompletionBlock: {
             (error:NSError?, ref:Firebase!) in
+            
+            SwiftSpinner.hide()
+
             if (error != nil) {
                 
-                let alert = UIAlertView(title: "Error",
-                    message: "We Could not Add your image to the Steam, please try later.",
-                    delegate: nil,
-                    cancelButtonTitle: "OK")
-                alert.show()
+
+                
+                let alertController = UIAlertController(title: "Error", message:
+                    "We got and error :( Please try again later", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in
+                    
+                    self.performSegueWithIdentifier("goToStream", sender: self)
+
+                
+                }))
+                
+                self.presentViewController(alertController, animated: true, completion: nil)
                 
             } else {
                 
+
+                let alertController = UIAlertController(title: "Success!", message:
+                    "Image on Stream!", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in
+                    
+                    self.performSegueWithIdentifier("goToStream", sender: self)
+                    
+                    
+                }))
                 
-                let alert = UIAlertView(title: "Image on Stream!",
-                    message: "Your image is on the stream!",
-                    delegate: nil,
-                    cancelButtonTitle: "OK")
-                alert.show()
+                self.presentViewController(alertController, animated: true, completion: nil)
                 
             }
         })

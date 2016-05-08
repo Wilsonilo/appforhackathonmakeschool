@@ -19,20 +19,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftSpinner.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>73E84FACF66B01DC4437CB1BB3CA329C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8B86560AEE1F0030F02A2EA436A90F5B</key>
+		<key>7FDB0986A38759E3F2EFF171DFF8861E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B7AC9326D819482593FE118E915409D7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B8A166C26BF04146362E026B9E26F369</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F03779D74664ABE28AAA97A109E140E5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
