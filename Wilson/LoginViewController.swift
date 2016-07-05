@@ -65,8 +65,8 @@ class LoginViewController: UIViewController {
     //Sign In
     @IBAction func SignIn(sender: AnyObject) {
         
-        appusers.authUser(inputEmail.text, password: inputPassword.text,
-                     withCompletionBlock: { error, authData in
+        FIRAuth.auth()?.signInWithEmail(inputEmail.text!, password: inputPassword.text!,
+                     completion: { error, authData in
             if error != nil {
                 print("No user");
             } else {
