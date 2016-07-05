@@ -12,9 +12,6 @@ import VideoSplashKit
 
 class LoginViewController: UIViewController {
     
-    //Vars
-    let appusers    =    (url:  "https://hackathonappmakescho.firebaseio.com");
-    
     //Outlets
     @IBOutlet weak var inputEmail: UITextField!
     @IBOutlet weak var inputPassword: UITextField!
@@ -50,10 +47,8 @@ class LoginViewController: UIViewController {
         inputPassword.layer.masksToBounds = true
     }
     
-    //Did Appeared
+    //Did Appear
     override func viewDidAppear(animated: Bool) {
-        
-        //Hide Navigation Bar
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
 

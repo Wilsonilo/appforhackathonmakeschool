@@ -32,14 +32,6 @@ class DetailTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Add Gradient to EventInfoView
-//        gradientLayer.frame = EventInfoView.bounds
-//        let whitecolor  = UIColor.whiteColor().CGColor as CGColorRef
-//        let graycolor   = UIColor(red:0.537,  green:0.537,  blue:0.537, alpha:1).CGColor as CGColorRef
-//        gradientLayer.colors = [whitecolor, graycolor]
-//        gradientLayer.locations = [0.0, 1.0]
-//        EventInfoView.layer.addSublayer(gradientLayer)
-        
         //Declarations
         NameOfEventTop.text = EventName
         LabelName.text = EventName

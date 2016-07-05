@@ -6,7 +6,6 @@
 //
 //
 
-import Foundation
 import Firebase
 
 let BASE_URL = FIRDatabase.database().reference()

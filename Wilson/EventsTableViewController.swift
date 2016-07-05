@@ -55,8 +55,6 @@ class EventsTableViewController: UITableViewController {
             cell.imageCell.layer.cornerRadius =  cell.imageCell.frame.size.width / 2;
             cell.imageCell.layer.opacity = 1.0
         }
-        //cell.imageCell.
-        //cell.amountLabel.text = "$\(loans[indexPath.row].amount)"
         return cell
     }
     

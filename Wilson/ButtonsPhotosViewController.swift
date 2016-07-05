@@ -38,7 +38,7 @@ class ButtonsPhotosViewController: UIViewController, UIImagePickerControllerDele
             })
         
         } else {
-            print("i get nil on the image")
+            print("imagePickerController: image == nil")
         }
     }
     
