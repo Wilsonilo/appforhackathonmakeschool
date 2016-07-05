@@ -7,7 +7,7 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
-*.xcuserstate
+**/**/*.xcuserstate
 # Readme Stuf #
 ######################
 Logo.png
