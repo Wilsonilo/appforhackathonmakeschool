@@ -53,7 +53,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-login" translatesAutoresizingMaskIntoConstraints="NO" id="3C3-Zj-tTw">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Dyr-Ay-DoJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unt" translatesAutoresizingMaskIntoConstraints="NO" id="Dyr-Ay-DoJ">
                                 <rect key="frame" x="180" y="100" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="310-dK-lrs"/>
@@ -132,14 +132,22 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ee8-uH-g05">
-                                <rect key="frame" x="380" y="28" width="46" height="30"/>
+                                <rect key="frame" x="277" y="28" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.96936265501146834" blue="0.96218421818668298" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="0V5-9f-pgt"/>
                                     <constraint firstAttribute="height" constant="30" id="IKi-zs-2Qs"/>
+                                    <constraint firstAttribute="width" constant="46" id="jHz-YA-dXy"/>
                                 </constraints>
                                 <state key="normal" title="Temp">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0V5-9f-pgt"/>
+                                        <exclude reference="IKi-zs-2Qs"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="HMO-i8-oKz" kind="show" id="cTM-WR-rWE"/>
                                 </connections>
@@ -157,10 +165,12 @@
                             <constraint firstItem="nLH-qh-3Ml" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I9e-PT-6Jh"/>
                             <constraint firstItem="3C3-Zj-tTw" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="IsY-Aq-7Vo"/>
                             <constraint firstItem="cxd-YN-h0p" firstAttribute="top" secondItem="0X9-UM-JCh" secondAttribute="top" id="NJY-2G-3Pp"/>
+                            <constraint firstItem="ee8-uH-g05" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="OYg-Gl-2qN"/>
                             <constraint firstItem="cxd-YN-h0p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QEa-4j-mqX"/>
                             <constraint firstItem="3C3-Zj-tTw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="SKI-am-88E"/>
                             <constraint firstItem="0X9-UM-JCh" firstAttribute="top" secondItem="Dyr-Ay-DoJ" secondAttribute="bottom" constant="103" id="Xfg-wA-dQH"/>
                             <constraint firstItem="ee8-uH-g05" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="afK-LW-KeE"/>
+                            <constraint firstItem="ee8-uH-g05" firstAttribute="centerX" secondItem="Dyr-Ay-DoJ" secondAttribute="centerX" id="cye-UI-NSZ"/>
                             <constraint firstItem="cxd-YN-h0p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dKX-Rp-XhG"/>
                             <constraint firstItem="CYF-Im-Zpd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hrL-Hw-PRp"/>
                             <constraint firstItem="Dyr-Ay-DoJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="i6r-iv-AdO"/>
@@ -174,6 +184,8 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="BWB-uQ-aAk"/>
+                                <exclude reference="5bt-xZ-Oc2"/>
+                                <exclude reference="afK-LW-KeE"/>
                                 <exclude reference="zSD-XT-V56"/>
                                 <exclude reference="NJY-2G-3Pp"/>
                             </mask>
@@ -203,7 +215,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="148"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="byX-N1-qnC" id="wnX-DI-Czt">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="147.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="147"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bDB-rT-hYD">
@@ -773,12 +785,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="525" height="278"/>
         <image name="background-login" width="750" height="1334"/>
         <image name="background-signup" width="750" height="1334"/>
         <image name="password-icon" width="40" height="46"/>
         <image name="photoalbum" width="84" height="84"/>
         <image name="previous" width="34" height="60"/>
+        <image name="unt" width="1050" height="556"/>
         <image name="user-icon" width="44" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
