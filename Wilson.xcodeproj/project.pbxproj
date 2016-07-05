@@ -12,7 +12,7 @@
 		C84290A51CD3984800A87EF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84290A31CD3984800A87EF5 /* Main.storyboard */; };
 		C84290AA1CD3984800A87EF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84290A81CD3984800A87EF5 /* LaunchScreen.storyboard */; };
 		C873F1771CDCE4B00024EA72 /* StreamCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873F1761CDCE4B00024EA72 /* StreamCollectionViewController.swift */; };
-		C873F17A1CDCE6870024EA72 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873F1781CDCE6870024EA72 /* Contants.swift */; };
+		C873F17A1CDCE6870024EA72 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873F1781CDCE6870024EA72 /* Constants.swift */; };
 		C873F17B1CDCE6870024EA72 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873F1791CDCE6870024EA72 /* DataService.swift */; };
 		C873F17D1CDCE9B60024EA72 /* StreamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873F17C1CDCE9B60024EA72 /* StreamCollectionViewCell.swift */; };
 		C8A865751CD7FB2600CFCEC1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A865741CD7FB2600CFCEC1 /* LoginViewController.swift */; };
@@ -45,7 +45,7 @@
 		C84290A91CD3984800A87EF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C84290AB1CD3984800A87EF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C873F1761CDCE4B00024EA72 /* StreamCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamCollectionViewController.swift; sourceTree = "<group>"; };
-		C873F1781CDCE6870024EA72 /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
+		C873F1781CDCE6870024EA72 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C873F1791CDCE6870024EA72 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		C873F17C1CDCE9B60024EA72 /* StreamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamCollectionViewCell.swift; sourceTree = "<group>"; };
 		C8A865741CD7FB2600CFCEC1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +89,55 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8184434B1D2C29B000221350 /* HelperFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C873F1781CDCE6870024EA72 /* Constants.swift */,
+				C842909F1CD3984800A87EF5 /* AppDelegate.swift */,
+				C84290AB1CD3984800A87EF5 /* Info.plist */,
+			);
+			name = HelperFiles;
+			sourceTree = "<group>";
+		};
+		8184434C1D2C29CB00221350 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C8A865741CD7FB2600CFCEC1 /* LoginViewController.swift */,
+				C8A8658B1CD8080300CFCEC1 /* SignUpViewController.swift */,
+				C8E1DD471CD8328000C4910C /* EventsTableViewController.swift */,
+				C8C5CE8F1CDC13D4003A6755 /* DetalleTableViewController.swift */,
+				C8C5CE911CDC3235003A6755 /* ButtonsPhotosViewController.swift */,
+				C8C5CE931CDC3241003A6755 /* TakePhotoViewController.swift */,
+				C873F1761CDCE4B00024EA72 /* StreamCollectionViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8184434D1D2C2A0200221350 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C8E1DD491CD835CE00C4910C /* EventTableViewCell.swift */,
+				C873F17C1CDCE9B60024EA72 /* StreamCollectionViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8184434E1D2C2A1D00221350 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C8E1DD431CD831BB00C4910C /* Event.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		8184434F1D2C2A3D00221350 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C873F1791CDCE6870024EA72 /* DataService.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		81DEFB6F1381AEF9F8781F79 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,22 +169,13 @@
 			isa = PBXGroup;
 			children = (
 				C84290A31CD3984800A87EF5 /* Main.storyboard */,
-				C842909F1CD3984800A87EF5 /* AppDelegate.swift */,
-				C873F1781CDCE6870024EA72 /* Contants.swift */,
-				C873F1791CDCE6870024EA72 /* DataService.swift */,
-				C8A865741CD7FB2600CFCEC1 /* LoginViewController.swift */,
-				C8A8658B1CD8080300CFCEC1 /* SignUpViewController.swift */,
-				C8E1DD431CD831BB00C4910C /* Event.swift */,
-				C8E1DD471CD8328000C4910C /* EventsTableViewController.swift */,
-				C8E1DD491CD835CE00C4910C /* EventTableViewCell.swift */,
-				C8C5CE8F1CDC13D4003A6755 /* DetalleTableViewController.swift */,
-				C8C5CE911CDC3235003A6755 /* ButtonsPhotosViewController.swift */,
-				C8C5CE931CDC3241003A6755 /* TakePhotoViewController.swift */,
-				C873F1761CDCE4B00024EA72 /* StreamCollectionViewController.swift */,
-				C873F17C1CDCE9B60024EA72 /* StreamCollectionViewCell.swift */,
+				8184434B1D2C29B000221350 /* HelperFiles */,
+				8184434F1D2C2A3D00221350 /* Helpers */,
+				8184434C1D2C29CB00221350 /* ViewControllers */,
+				8184434E1D2C2A1D00221350 /* Models */,
+				8184434D1D2C2A0200221350 /* Views */,
 				C84290A81CD3984800A87EF5 /* LaunchScreen.storyboard */,
 				C8A865761CD7FDCC00CFCEC1 /* Assets.xcassets */,
-				C84290AB1CD3984800A87EF5 /* Info.plist */,
 			);
 			path = Wilson;
 			sourceTree = "<group>";
@@ -191,7 +231,7 @@
 				TargetAttributes = {
 					C842909B1CD3984700A87EF5 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = DYWX76A76F;
+						DevelopmentTeam = CX3J8KNDJA;
 					};
 				};
 			};
@@ -299,7 +339,7 @@
 				C873F1771CDCE4B00024EA72 /* StreamCollectionViewController.swift in Sources */,
 				C8C5CE921CDC3235003A6755 /* ButtonsPhotosViewController.swift in Sources */,
 				C8E1DD481CD8328000C4910C /* EventsTableViewController.swift in Sources */,
-				C873F17A1CDCE6870024EA72 /* Contants.swift in Sources */,
+				C873F17A1CDCE6870024EA72 /* Constants.swift in Sources */,
 				C84290A01CD3984800A87EF5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,12 +456,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Wilson/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PODS_ROOT = "${SRCROOT}/Pods/";
 				PRODUCT_BUNDLE_IDENTIFIER = net.wilsonmunoz.Wilson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -435,12 +477,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Wilson/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PODS_ROOT = "${SRCROOT}/Pods/";
 				PRODUCT_BUNDLE_IDENTIFIER = net.wilsonmunoz.Wilson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
