@@ -14,9 +14,9 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
 //    
 //    //Var Images
 //    let images          =   FIRDatabase(url:  "https://hackathonappmakescho.firebaseio.com");
-//    var base64String:       NSString!
-//    var myImage : UIImage!
-//    
+    var base64String:       NSString!
+    var myImage : UIImage!
+//
 //    //Outlets
 //    @IBOutlet weak var ButtonUsePhoto: UIButton!
 //    @IBOutlet weak var ImagePicked: UIImageView!
