@@ -14,13 +14,13 @@ private let reuseIdentifier = "Cell"
 
 class StreamCollectionViewController: UICollectionViewController {
     
-    var imagenes: [AnyObject] = []
+    var images: [AnyObject] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         DataService.dataService.IMAGES_REF.observeEventType(.Value, withBlock: { snapshot in
-            self.imagenes.insert(snapshot.value!, atIndex: 0)
+            self.images.insert(snapshot.value!, atIndex: 0)
             self.collectionView?.reloadData()
             
             }, withCancelBlock: { error in
@@ -37,7 +37,7 @@ class StreamCollectionViewController: UICollectionViewController {
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return imagenes.count
+        return images.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -47,9 +47,9 @@ class StreamCollectionViewController: UICollectionViewController {
         
         DataService.dataService.IMAGES_REF.observeEventType(.Value, withBlock: { snapshot in
             
-            print(self.imagenes.count)
+            print(self.images.count)
             
-            let imageString = self.imagenes[indexPath.row]["image"] as! [String:AnyObject]
+            let imageString = self.images[indexPath.row]["image"] as! [String:AnyObject]
             let base64EncodedString = imageString["string"]
             let imageData = NSData(base64EncodedString: base64EncodedString as! String,
                 options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)

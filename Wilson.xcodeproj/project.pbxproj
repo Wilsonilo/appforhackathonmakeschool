@@ -37,7 +37,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2A50A21C1D2C57D700C851BD /* 409018458.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 409018458.mp4; path = ../../409018458.mp4; sourceTree = "<group>"; };
 		5EF9363ADAC9DD340A28A896 /* Pods-Wilson.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wilson.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wilson/Pods-Wilson.release.xcconfig"; sourceTree = "<group>"; };
 		64B32A2B7AA97AD0E3355EC0 /* Pods-Wilson.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wilson.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wilson/Pods-Wilson.debug.xcconfig"; sourceTree = "<group>"; };
 		817A4B381D2C5E8E0082D508 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -144,7 +143,6 @@
 		C84290931CD3984700A87EF5 = {
 			isa = PBXGroup;
 			children = (
-				2A50A21C1D2C57D700C851BD /* 409018458.mp4 */,
 				C8A865811CD7FDF700CFCEC1 /* fonts */,
 				C842909E1CD3984800A87EF5 /* Wilson */,
 				C842909D1CD3984700A87EF5 /* Products */,
