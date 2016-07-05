@@ -50,14 +50,13 @@ class SignUpViewController: UIViewController {
     @IBAction func SignUp(sender: AnyObject) {
         print(InputEmail.text)
         print(InputPassword.text)
-        let app = Firebase(url: "https://hackathonappmakescho.firebaseio.com")
-        app.createUser(InputEmail.text, password: InputPassword.text,
-           withValueCompletionBlock: { error, result in
+        
+        FIRAuth.auth()?.createUserWithEmail(InputEmail.text!, password: InputPassword.text!,
+                                            completion: { user,error in
             if error != nil {
                 // There was an error creating the account
             } else {
-                let uid = result["uid"] as? String
-                print("Successfully created user account with uid: \(uid)")
+                print("Successfully created user account with uid: \(user)")
             }
         })
     }

@@ -7,5 +7,6 @@
 //
 
 import Foundation
+import Firebase
 
-let BASE_URL = "https://hackathonappmakescho.firebaseio.com"
+let BASE_URL = FIRDatabase.database().reference()

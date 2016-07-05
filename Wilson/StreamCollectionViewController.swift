@@ -20,7 +20,7 @@ class StreamCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
 
         DataService.dataService.IMAGES_REF.observeEventType(.Value, withBlock: { snapshot in
-            self.imagenes.insert(snapshot.value, atIndex: 0)
+            self.imagenes.insert(snapshot.value!, atIndex: 0)
             self.collectionView?.reloadData()
             
             }, withCancelBlock: { error in

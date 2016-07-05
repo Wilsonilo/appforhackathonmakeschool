@@ -13,7 +13,7 @@ import VideoSplashKit
 class LoginViewController: UIViewController {
     
     //Vars
-    let appusers    =    Firebase(url:  "https://hackathonappmakescho.firebaseio.com");
+    let appusers    =    (url:  "https://hackathonappmakescho.firebaseio.com");
     
     //Outlets
     @IBOutlet weak var inputEmail: UITextField!

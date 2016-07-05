@@ -13,14 +13,14 @@ class DataService {
     
     static let dataService = DataService()
     
-    private var _BASE_REF   = Firebase(url: "\(BASE_URL)")
-    private var _IMAGES_REF = Firebase(url: "\(BASE_URL)/images")
+    private var _BASE_REF   = BASE_URL
+    private var _IMAGES_REF = BASE_URL.child("images")
     
-    var BASE_REF: Firebase {
+    var BASE_REF: FIRDatabaseReference {
         return _BASE_REF
     }
     
-    var IMAGES_REF: Firebase {
+    var IMAGES_REF: FIRDatabaseReference {
         return _IMAGES_REF
     }
 }
