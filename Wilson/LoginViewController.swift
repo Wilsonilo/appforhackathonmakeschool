@@ -15,17 +15,17 @@ class LoginViewController: UIViewController {
     let appusers    =    Firebase(url:  "https://wilsonapp.firebaseio.com");
     
     //Outlets
-    @IBOutlet weak var InputEmail: UITextField!
-    @IBOutlet weak var InputPassword: UITextField!
-    @IBOutlet weak var ButtonSignIn: UIButton!
+    @IBOutlet weak var inputEmail: UITextField!
+    @IBOutlet weak var inputPassword: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
     
     //Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Set Radius to Button
-        ButtonSignIn.layer.cornerRadius = 20
-        ButtonSignIn.clipsToBounds = true
+        signInButton.layer.cornerRadius = 20
+        signInButton.clipsToBounds = true
     }
     
     
@@ -38,15 +38,15 @@ class LoginViewController: UIViewController {
         let width = CGFloat(1.0)
         borderEmail.borderColor = UIColor.whiteColor().CGColor
         borderPassword.borderColor = UIColor.whiteColor().CGColor
-        borderEmail.frame = CGRect(x: 0, y: InputEmail.frame.size.height - width, width:  InputEmail.frame.size.width, height: InputEmail.frame.size.height)
-        borderPassword.frame = CGRect(x: 0, y: InputPassword.frame.size.height - width, width:  InputPassword.frame.size.width, height: InputPassword.frame.size.height)
+        borderEmail.frame = CGRect(x: 0, y: inputEmail.frame.size.height - width, width:  inputEmail.frame.size.width, height: inputEmail.frame.size.height)
+        borderPassword.frame = CGRect(x: 0, y: inputPassword.frame.size.height - width, width:  inputPassword.frame.size.width, height: inputPassword.frame.size.height)
         
         borderEmail.borderWidth = width
         borderPassword.borderWidth = width
-        InputEmail.layer.addSublayer(borderEmail)
-        InputEmail.layer.masksToBounds = true
-        InputPassword.layer.addSublayer(borderPassword)
-        InputPassword.layer.masksToBounds = true
+        inputEmail.layer.addSublayer(borderEmail)
+        inputEmail.layer.masksToBounds = true
+        inputPassword.layer.addSublayer(borderPassword)
+        inputPassword.layer.masksToBounds = true
     }
     
     //Did Appeared
@@ -64,13 +64,13 @@ class LoginViewController: UIViewController {
     //Sign In
     @IBAction func SignIn(sender: AnyObject) {
         
-        appusers.authUser(InputEmail.text, password: InputPassword.text,
+        appusers.authUser(inputEmail.text, password: inputPassword.text,
                      withCompletionBlock: { error, authData in
-                        if error != nil {
-                            print("No user");
-                        } else {
-                            print("All Good");
-                        }
+            if error != nil {
+                print("No user");
+            } else {
+                print("All Good");
+            }
         })
     }
 }
