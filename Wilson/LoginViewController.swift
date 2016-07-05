@@ -13,23 +13,19 @@ class LoginViewController: UIViewController {
     
     //Vars
     let appusers    =    Firebase(url:  "https://wilsonapp.firebaseio.com");
-
     
     //Outlets
     @IBOutlet weak var InputEmail: UITextField!
     @IBOutlet weak var InputPassword: UITextField!
     @IBOutlet weak var ButtonSignIn: UIButton!
     
-    
     //Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         //Set Radius to Button
         ButtonSignIn.layer.cornerRadius = 20
         ButtonSignIn.clipsToBounds = true
-
     }
     
     
@@ -51,7 +47,6 @@ class LoginViewController: UIViewController {
         InputEmail.layer.masksToBounds = true
         InputPassword.layer.addSublayer(borderPassword)
         InputPassword.layer.masksToBounds = true
-    
     }
     
     //Did Appeared
@@ -66,24 +61,16 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
     //Sign In
     @IBAction func SignIn(sender: AnyObject) {
         
-
         appusers.authUser(InputEmail.text, password: InputPassword.text,
                      withCompletionBlock: { error, authData in
                         if error != nil {
-                            
                             print("No user");
-                            
                         } else {
-                        
                             print("All Good");
-                            
                         }
         })
-    
     }
-    
 }

@@ -10,7 +10,6 @@ import UIKit
 import Firebase
 import SwiftSpinner
 
-
 class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     //Var Images
@@ -22,7 +21,6 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
     @IBOutlet weak var ButtonUsePhoto: UIButton!
     @IBOutlet weak var ImagePicked: UIImageView!
     
-    
     //Click on Image to use camera
     @IBAction func openCameraButton(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
@@ -33,7 +31,6 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
             self.presentViewController(imagePicker, animated: true, completion: nil)
         }
     }
-    
     
     //Did Finish Picking Image
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
@@ -61,9 +58,6 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
             SwiftSpinner.hide()
 
             if (error != nil) {
-                
-
-                
                 let alertController = UIAlertController(title: "Error", message:
                     "We got and error :( Please try again later", preferredStyle: UIAlertControllerStyle.Alert)
                 alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in
@@ -76,28 +70,17 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
                 self.presentViewController(alertController, animated: true, completion: nil)
                 
             } else {
-                
-
                 let alertController = UIAlertController(title: "Success!", message:
                     "Image on Stream!", preferredStyle: UIAlertControllerStyle.Alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in
-                    
                     self.performSegueWithIdentifier("goToStream", sender: self)
-                    
-                    
                 }))
                 
                 self.presentViewController(alertController, animated: true, completion: nil)
-                
             }
         })
-
-        
-        //UIImageWriteToSavedPhotosAlbum(compressedJPGImage!, nil, nil, nil)
-        
-        
-        
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if ImagePicked != nil {
@@ -117,7 +100,4 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-
 }

@@ -9,7 +9,6 @@
 import UIKit
 import SDWebImage
 
-
 class DetalleTableViewController: UIViewController {
     
     //Outlets
@@ -22,7 +21,6 @@ class DetalleTableViewController: UIViewController {
     @IBOutlet weak var LabelCity: UILabel!
     @IBOutlet weak var LabelName: UILabel!
     @IBOutlet weak var LabelState: UILabel!
-    
     
     //Vars
     var EventImageUrl:String!
@@ -54,12 +52,7 @@ class DetalleTableViewController: UIViewController {
             MainImageView.sd_setImageWithURL(url, placeholderImage: img) {
                 (img, err, cacheType, imgUrl) -> Void in
             }
-        MainImageView.clipsToBounds = true
-
+            MainImageView.clipsToBounds = true
         }
-
-
     }
-
-
 }

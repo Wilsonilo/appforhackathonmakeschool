@@ -19,21 +19,12 @@ class StreamCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
         DataService.dataService.IMAGES_REF.observeEventType(.Value, withBlock: { snapshot in
-
-            
             self.imagenes.insert(snapshot.value, atIndex: 0)
-            
             self.collectionView?.reloadData()
-
             
             }, withCancelBlock: { error in
-                
                 print(error.description)
-                
-
-                
         })
         
     }
@@ -43,14 +34,11 @@ class StreamCollectionViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
     // MARK: UICollectionViewDataSource
-
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
@@ -76,11 +64,7 @@ class StreamCollectionViewController: UICollectionViewController {
             }, withCancelBlock: { error in
                 
                 print(error.description)
-                
-        })
-        
+        })        
         return cell
     }
-
-
 }

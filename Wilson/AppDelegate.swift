@@ -15,21 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
-        //Cambiamos colores y cosas:
-        //UINavigationBar.appearance().barTintColor = UIColor(red: 242.0/255.0, green: 116.0/255.0, blue: 119.0/255.0, alpha: 1.0)
-//        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
-//        
-//        if let barFont = UIFont(name: "Avenir-Light", size: 20.0) {
-//            UINavigationBar.appearance().titleTextAttributes =
-//                [NSForegroundColorAttributeName:UIColor.whiteColor(),
-//                 NSFontAttributeName:barFont]
-//        }
-        
-        //Color del status (wifi, bateria, etc)
-        //UIApplication.sharedApplication().statusBarStyle = .LightContent
-        
-        
         return true
     }
 

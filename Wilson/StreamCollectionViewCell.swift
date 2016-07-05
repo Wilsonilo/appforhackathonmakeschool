@@ -10,7 +10,5 @@ import UIKit
 
 class StreamCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var ImageStream:UIImageView!
-
-    
+    @IBOutlet weak var ImageStream:UIImageView!    
 }

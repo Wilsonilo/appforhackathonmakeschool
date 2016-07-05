@@ -10,20 +10,16 @@ import UIKit
 import Firebase
 
 class SignUpViewController: UIViewController {
-    
 
     @IBOutlet weak var InputEmail: UITextField!
     @IBOutlet weak var InputPassword: UITextField!
     @IBOutlet weak var SignUpButtonInside: UIButton!
+    
     override func viewDidLoad() {
-        
-        
         super.viewDidLoad()
         //Set Radius to Button
         SignUpButtonInside.layer.cornerRadius = 20
         SignUpButtonInside.clipsToBounds = true
-
-
     }
     
     //Did Layout Subviews
@@ -44,7 +40,6 @@ class SignUpViewController: UIViewController {
         InputEmail.layer.masksToBounds = true
         InputPassword.layer.addSublayer(borderPassword)
         InputPassword.layer.masksToBounds = true
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,9 +59,6 @@ class SignUpViewController: UIViewController {
                 let uid = result["uid"] as? String
                 print("Successfully created user account with uid: \(uid)")
             }
-        
         })
-        
     }
-
 }

@@ -10,11 +10,8 @@ import UIKit
 import Firebase
 
 class ButtonsPhotosViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    //var ImageForLibrary:UIImage = UIImage(named: "")!
-    //ar ImageFromLibrary = UIImageView(image: ImageForLibrary!)
-    
-  //let ImageFromLibrary = UIImageView(image: UIImage(named: "")!)
+
+    //MARK: Vars
     var myImage : UIImage!
 
 
@@ -27,7 +24,6 @@ class ButtonsPhotosViewController: UIViewController, UIImagePickerControllerDele
             imagePicker.allowsEditing = false
             self.presentViewController(imagePicker, animated: true, completion: nil)
         }
-    
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
@@ -42,9 +38,7 @@ class ButtonsPhotosViewController: UIViewController, UIImagePickerControllerDele
             })
         
         } else {
-        
             print("i get nil on the image")
-        
         }
     }
     
@@ -52,23 +46,16 @@ class ButtonsPhotosViewController: UIViewController, UIImagePickerControllerDele
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "PhotoLibrarySegue" {
             let destinationController = segue.destinationViewController as! TakePhotoViewController
-            
                 destinationController.myImage = myImage
-
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
 }

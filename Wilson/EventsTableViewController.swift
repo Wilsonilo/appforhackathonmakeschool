@@ -14,11 +14,9 @@ class EventsTableViewController: UITableViewController {
     let eventsURL = "http://api.eventful.com/json/events/search?location=San+Francisco&app_key=tMPDGBjnXGVq87jZ"
     var events = [Event]()
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         getLatestLoans()
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,9 +53,7 @@ class EventsTableViewController: UITableViewController {
             cell.imageCell.layer.cornerRadius =  cell.imageCell.frame.size.width / 2;
             cell.imageCell.layer.opacity = 1.0
         }
-        
         //cell.imageCell.
-
         //cell.amountLabel.text = "$\(loans[indexPath.row].amount)"
         return cell
     }
@@ -107,7 +103,6 @@ class EventsTableViewController: UITableViewController {
                         event.image = image!["medium"]!!["url"] as! String
                     
                     }
-                
                 }
 
                 event.address = jsonEvent["city_name"] as! String

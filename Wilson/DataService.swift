@@ -11,7 +11,6 @@ import Firebase
 
 class DataService {
     
-    
     static let dataService = DataService()
     
     private var _BASE_REF   = Firebase(url: "\(BASE_URL)")
