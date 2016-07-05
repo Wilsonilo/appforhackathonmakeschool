@@ -12,7 +12,7 @@ import Firebase
 class LoginViewController: UIViewController {
     
     //Vars
-    let appusers    =    Firebase(url:  "https://wilsonapp.firebaseio.com");
+    let appusers    =    Firebase(url:  "https://hackathonappmakescho.firebaseio.com");
     
     //Outlets
     @IBOutlet weak var inputEmail: UITextField!
