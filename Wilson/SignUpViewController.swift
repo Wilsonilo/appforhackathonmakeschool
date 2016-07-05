@@ -50,7 +50,7 @@ class SignUpViewController: UIViewController {
     @IBAction func SignUp(sender: AnyObject) {
         print(InputEmail.text)
         print(InputPassword.text)
-        let app = Firebase(url: "https://wilsonapp.firebaseio.com")
+        let app = Firebase(url: "https://hackathonappmakescho.firebaseio.com")
         app.createUser(InputEmail.text, password: InputPassword.text,
            withValueCompletionBlock: { error, result in
             if error != nil {
