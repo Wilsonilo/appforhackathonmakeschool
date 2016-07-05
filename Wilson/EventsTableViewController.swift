@@ -11,7 +11,9 @@ import SDWebImage
 
 class EventsTableViewController: UITableViewController {
     
-    let eventsURL = "http://api.eventful.com/json/events/search?location=San+Francisco&app_key=tMPDGBjnXGVq87jZ"
+    //Using Prototype Data
+    //For real live data change to (50 calls per day): http://api.eventful.com/json/events/search?location=San+Francisco&app_key=tMPDGBjnXGVq87jZ
+    let eventsURL = "http://wilsonmunoz.net/makeschool/prototypedata.json"
     var events = [Event]()
 
     override func viewDidLoad() {
