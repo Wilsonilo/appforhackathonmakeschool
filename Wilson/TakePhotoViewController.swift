@@ -13,7 +13,7 @@ import SwiftSpinner
 class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     //Var Images
-    let images          =   Firebase(url:  "https://wilsonapp.firebaseio.com");
+    let images          =   Firebase(url:  "https://hackathonappmakescho.firebaseio.com");
     var base64String:       NSString!
     var myImage : UIImage!
     
