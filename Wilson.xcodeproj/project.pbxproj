@@ -27,7 +27,7 @@
 		C8A865891CD7FE1400CFCEC1 /* SF-UI-Display-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8A8657F1CD7FDE800CFCEC1 /* SF-UI-Display-Thin.ttf */; };
 		C8A8658A1CD7FE1400CFCEC1 /* SF-UI-Display-Ultralight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8A865801CD7FDE800CFCEC1 /* SF-UI-Display-Ultralight.ttf */; };
 		C8A8658C1CD8080300CFCEC1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A8658B1CD8080300CFCEC1 /* SignUpViewController.swift */; };
-		C8C5CE901CDC13D4003A6755 /* DetalleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C5CE8F1CDC13D4003A6755 /* DetalleTableViewController.swift */; };
+		C8C5CE901CDC13D4003A6755 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C5CE8F1CDC13D4003A6755 /* DetailTableViewController.swift */; };
 		C8C5CE921CDC3235003A6755 /* ButtonsPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C5CE911CDC3235003A6755 /* ButtonsPhotosViewController.swift */; };
 		C8C5CE941CDC3242003A6755 /* TakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C5CE931CDC3241003A6755 /* TakePhotoViewController.swift */; };
 		C8E1DD441CD831BB00C4910C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E1DD431CD831BB00C4910C /* Event.swift */; };
@@ -60,7 +60,7 @@
 		C8A8657F1CD7FDE800CFCEC1 /* SF-UI-Display-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Thin.ttf"; sourceTree = "<group>"; };
 		C8A865801CD7FDE800CFCEC1 /* SF-UI-Display-Ultralight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Ultralight.ttf"; sourceTree = "<group>"; };
 		C8A8658B1CD8080300CFCEC1 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		C8C5CE8F1CDC13D4003A6755 /* DetalleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleTableViewController.swift; sourceTree = "<group>"; };
+		C8C5CE8F1CDC13D4003A6755 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		C8C5CE911CDC3235003A6755 /* ButtonsPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsPhotosViewController.swift; sourceTree = "<group>"; };
 		C8C5CE931CDC3241003A6755 /* TakePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakePhotoViewController.swift; sourceTree = "<group>"; };
 		C8E1DD431CD831BB00C4910C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 				C8A865741CD7FB2600CFCEC1 /* LoginViewController.swift */,
 				C8A8658B1CD8080300CFCEC1 /* SignUpViewController.swift */,
 				C8E1DD471CD8328000C4910C /* EventsTableViewController.swift */,
-				C8C5CE8F1CDC13D4003A6755 /* DetalleTableViewController.swift */,
+				C8C5CE8F1CDC13D4003A6755 /* DetailTableViewController.swift */,
 				C8C5CE911CDC3235003A6755 /* ButtonsPhotosViewController.swift */,
 				C8C5CE931CDC3241003A6755 /* TakePhotoViewController.swift */,
 				C873F1761CDCE4B00024EA72 /* StreamCollectionViewController.swift */,
@@ -329,7 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8E1DD4A1CD835CE00C4910C /* EventTableViewCell.swift in Sources */,
-				C8C5CE901CDC13D4003A6755 /* DetalleTableViewController.swift in Sources */,
+				C8C5CE901CDC13D4003A6755 /* DetailTableViewController.swift in Sources */,
 				C8E1DD441CD831BB00C4910C /* Event.swift in Sources */,
 				C873F17B1CDCE6870024EA72 /* DataService.swift in Sources */,
 				C8A8658C1CD8080300CFCEC1 /* SignUpViewController.swift in Sources */,

@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class DetalleTableViewController: UIViewController {
+class DetailTableViewController: UIViewController {
     
     //Outlets
     @IBOutlet weak var NavigationBarView: UIView!

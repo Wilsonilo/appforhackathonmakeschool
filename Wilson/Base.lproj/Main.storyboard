@@ -181,9 +181,9 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="ButtonSignIn" destination="nLH-qh-3Ml" id="tlQ-ks-IXU"/>
-                        <outlet property="InputEmail" destination="0X9-UM-JCh" id="7Je-V1-tb2"/>
-                        <outlet property="InputPassword" destination="cxd-YN-h0p" id="IaF-Rg-uXE"/>
+                        <outlet property="inputEmail" destination="0X9-UM-JCh" id="vJl-Js-a87"/>
+                        <outlet property="inputPassword" destination="cxd-YN-h0p" id="kbc-KB-lJN"/>
+                        <outlet property="signInButton" destination="nLH-qh-3Ml" id="lbK-jN-YSp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -287,10 +287,10 @@
             </objects>
             <point key="canvasLocation" x="2096" y="479"/>
         </scene>
-        <!--Detalle Table View Controller-->
+        <!--Detail Table View Controller-->
         <scene sceneID="slB-6s-aHz">
             <objects>
-                <viewController id="MYF-JU-dvH" customClass="DetalleTableViewController" customModule="Wilson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MYF-JU-dvH" customClass="DetailTableViewController" customModule="Wilson" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zhj-Rh-avC"/>
                         <viewControllerLayoutGuide type="bottom" id="6nn-tg-ezO"/>
@@ -783,7 +783,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="cTM-WR-rWE"/>
+        <segue reference="ckE-Sn-pTJ"/>
         <segue reference="coF-Da-O2P"/>
-        <segue reference="MIc-cH-iM4"/>
     </inferredMetricsTieBreakers>
 </document>

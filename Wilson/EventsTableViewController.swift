@@ -119,7 +119,7 @@ class EventsTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "verEvento" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let destinationController = segue.destinationViewController as! DetalleTableViewController
+                let destinationController = segue.destinationViewController as! DetailTableViewController
                 
                 //Send data to Single View
                 destinationController.EventName = events[indexPath.row].name
