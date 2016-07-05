@@ -181,9 +181,9 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="ButtonSignIn" destination="nLH-qh-3Ml" id="tlQ-ks-IXU"/>
-                        <outlet property="InputEmail" destination="0X9-UM-JCh" id="7Je-V1-tb2"/>
-                        <outlet property="InputPassword" destination="cxd-YN-h0p" id="IaF-Rg-uXE"/>
+                        <outlet property="inputEmail" destination="0X9-UM-JCh" id="d5v-7v-2F9"/>
+                        <outlet property="inputPassword" destination="cxd-YN-h0p" id="zc8-wE-5nQ"/>
+                        <outlet property="signInButton" destination="nLH-qh-3Ml" id="GBg-eU-6oU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
