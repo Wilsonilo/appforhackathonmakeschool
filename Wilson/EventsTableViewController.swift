@@ -25,6 +25,7 @@ class EventsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getLatestLoans()
+        
     }
 
     override func didReceiveMemoryWarning() {

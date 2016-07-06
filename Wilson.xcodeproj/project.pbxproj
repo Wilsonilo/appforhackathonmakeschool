@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		11F20A8566FEF19E8EE16885 /* Pods_Wilson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF59CF80F255C19FB8FAFD84 /* Pods_Wilson.framework */; };
+		2A50A21F1D2C723100C851BD /* OvalLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A21E1D2C723100C851BD /* OvalLayer.swift */; };
+		2A50A2211D2C723B00C851BD /* TriangleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A2201D2C723B00C851BD /* TriangleLayer.swift */; };
+		2A50A2231D2C724000C851BD /* RectangleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A2221D2C724000C851BD /* RectangleLayer.swift */; };
+		2A50A2251D2C724600C851BD /* ArcLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A2241D2C724600C851BD /* ArcLayer.swift */; };
+		2A50A2271D2C725500C851BD /* HolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A2261D2C725500C851BD /* HolderView.swift */; };
+		2A50A2291D2C726B00C851BD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A2281D2C726B00C851BD /* Colors.swift */; };
+		2A6FAB6E1D2D7D3400B0889F /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6FAB6D1D2D7D3400B0889F /* SplashScreenViewController.swift */; };
 		817A4B391D2C5E8E0082D508 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 817A4B381D2C5E8E0082D508 /* GoogleService-Info.plist */; };
 		C84290A01CD3984800A87EF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C842909F1CD3984800A87EF5 /* AppDelegate.swift */; };
 		C84290A51CD3984800A87EF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84290A31CD3984800A87EF5 /* Main.storyboard */; };
@@ -37,6 +44,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A50A21E1D2C723100C851BD /* OvalLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OvalLayer.swift; sourceTree = "<group>"; };
+		2A50A2201D2C723B00C851BD /* TriangleLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleLayer.swift; sourceTree = "<group>"; };
+		2A50A2221D2C724000C851BD /* RectangleLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleLayer.swift; sourceTree = "<group>"; };
+		2A50A2241D2C724600C851BD /* ArcLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcLayer.swift; sourceTree = "<group>"; };
+		2A50A2261D2C725500C851BD /* HolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HolderView.swift; sourceTree = "<group>"; };
+		2A50A2281D2C726B00C851BD /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2A6FAB6D1D2D7D3400B0889F /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		5EF9363ADAC9DD340A28A896 /* Pods-Wilson.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wilson.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wilson/Pods-Wilson.release.xcconfig"; sourceTree = "<group>"; };
 		64B32A2B7AA97AD0E3355EC0 /* Pods-Wilson.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wilson.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wilson/Pods-Wilson.debug.xcconfig"; sourceTree = "<group>"; };
 		817A4B381D2C5E8E0082D508 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -82,6 +96,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A50A21D1D2C721500C851BD /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2A50A2281D2C726B00C851BD /* Colors.swift */,
+				2A50A21E1D2C723100C851BD /* OvalLayer.swift */,
+				2A50A2201D2C723B00C851BD /* TriangleLayer.swift */,
+				2A50A2221D2C724000C851BD /* RectangleLayer.swift */,
+				2A50A2241D2C724600C851BD /* ArcLayer.swift */,
+				2A50A2261D2C725500C851BD /* HolderView.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
 		5ADFEB175F026C95CAEDFFD6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +138,7 @@
 				C8C5CE911CDC3235003A6755 /* ButtonsPhotosViewController.swift */,
 				C8C5CE931CDC3241003A6755 /* TakePhotoViewController.swift */,
 				C873F1761CDCE4B00024EA72 /* StreamCollectionViewController.swift */,
+				2A6FAB6D1D2D7D3400B0889F /* SplashScreenViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -162,6 +190,7 @@
 		C842909E1CD3984800A87EF5 /* Wilson */ = {
 			isa = PBXGroup;
 			children = (
+				2A50A21D1D2C721500C851BD /* SplashScreen */,
 				C84290A31CD3984800A87EF5 /* Main.storyboard */,
 				8184434B1D2C29B000221350 /* HelperFiles */,
 				8184434F1D2C2A3D00221350 /* Helpers */,
@@ -345,6 +374,8 @@
 				C8E1DD481CD8328000C4910C /* EventsTableViewController.swift in Sources */,
 				C873F17A1CDCE6870024EA72 /* Constants.swift in Sources */,
 				C84290A01CD3984800A87EF5 /* AppDelegate.swift in Sources */,
+				2A6FAB6E1D2D7D3400B0889F /* SplashScreenViewController.swift in Sources */,
+				2A50A21F1D2C723100C851BD /* OvalLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
