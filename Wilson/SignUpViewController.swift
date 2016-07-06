@@ -17,6 +17,8 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         //Set Radius to Button
         SignUpButtonInside.layer.cornerRadius = 20
         SignUpButtonInside.clipsToBounds = true
@@ -62,5 +64,10 @@ class SignUpViewController: UIViewController {
                 self.performSegueWithIdentifier("goToEvents", sender: self)
             }
         })
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
 }

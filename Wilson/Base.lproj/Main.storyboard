@@ -777,6 +777,7 @@
                         <outlet property="InputEmail" destination="5Ou-TI-XhN" id="ykQ-3P-I92"/>
                         <outlet property="InputPassword" destination="ESL-2F-ZYE" id="A5u-m8-jUO"/>
                         <outlet property="SignUpButtonInside" destination="M9j-1F-VN8" id="DSY-yX-eed"/>
+                        <segue destination="HMO-i8-oKz" kind="show" identifier="goToEvents" id="3Xk-Ms-mQS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VFg-NA-yBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -794,7 +795,7 @@
         <image name="user-icon" width="44" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cTM-WR-rWE"/>
+        <segue reference="3Xk-Ms-mQS"/>
         <segue reference="ckE-Sn-pTJ"/>
         <segue reference="34U-WB-9Ko"/>
     </inferredMetricsTieBreakers>

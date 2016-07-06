@@ -20,6 +20,8 @@ class LoginViewController: UIViewController {
     //Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         
         //Set Radius to Button
         signInButton.layer.cornerRadius = 20
@@ -103,6 +105,11 @@ class LoginViewController: UIViewController {
         
         
     }//IBAction
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
     
     
 }//Ends  Class
