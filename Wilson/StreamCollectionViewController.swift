@@ -14,7 +14,7 @@ private let reuseIdentifier = "Cell"
 
 class StreamCollectionViewController: UICollectionViewController {
     //VARS
-    var imagenes: [AnyObject] = []
+    var images: [AnyObject] = []
     var eventID: String!
     
     //DID LOAD
@@ -30,7 +30,7 @@ class StreamCollectionViewController: UICollectionViewController {
             //Get Data and append urls to "imagenes"
             let data = snapshot.value as! Dictionary<String, String>
             for foto in data{
-                self.imagenes.append(foto.1)
+                self.images.append(foto.1)
             }
             self.collectionView?.reloadData()
 
@@ -53,7 +53,7 @@ class StreamCollectionViewController: UICollectionViewController {
     
         let cellIdentifier = "Cell"
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath:indexPath) as! StreamCollectionViewCell
-        for image in imagenes{
+        for image in images{
             //Show Main Image
             if let url  = NSURL(string:image as! String) {
                 
