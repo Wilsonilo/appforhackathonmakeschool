@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Spring
 
 class StreamCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var ImageStream:UIImageView!
+    @IBOutlet weak var ImageStream: SpringImageView!
+    
+    
 }
