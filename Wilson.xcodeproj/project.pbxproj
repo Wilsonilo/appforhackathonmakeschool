@@ -8,13 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		11F20A8566FEF19E8EE16885 /* Pods_Wilson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF59CF80F255C19FB8FAFD84 /* Pods_Wilson.framework */; };
-		2A50A21F1D2C723100C851BD /* OvalLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A21E1D2C723100C851BD /* OvalLayer.swift */; };
-		2A50A2211D2C723B00C851BD /* TriangleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A2201D2C723B00C851BD /* TriangleLayer.swift */; };
-		2A50A2231D2C724000C851BD /* RectangleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A2221D2C724000C851BD /* RectangleLayer.swift */; };
-		2A50A2251D2C724600C851BD /* ArcLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A2241D2C724600C851BD /* ArcLayer.swift */; };
-		2A50A2271D2C725500C851BD /* HolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A2261D2C725500C851BD /* HolderView.swift */; };
-		2A50A2291D2C726B00C851BD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A2281D2C726B00C851BD /* Colors.swift */; };
-		2A50A22D1D2C744D00C851BD /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A22C1D2C744D00C851BD /* SplashScreen.swift */; };
 		817A4B391D2C5E8E0082D508 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 817A4B381D2C5E8E0082D508 /* GoogleService-Info.plist */; };
 		C84290A01CD3984800A87EF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C842909F1CD3984800A87EF5 /* AppDelegate.swift */; };
 		C84290A51CD3984800A87EF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84290A31CD3984800A87EF5 /* Main.storyboard */; };
@@ -44,13 +37,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2A50A21E1D2C723100C851BD /* OvalLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OvalLayer.swift; path = "../../../../../Downloads/SBLoader - Finished/SBLoader/OvalLayer.swift"; sourceTree = "<group>"; };
-		2A50A2201D2C723B00C851BD /* TriangleLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TriangleLayer.swift; path = "../../../../../Downloads/SBLoader - Finished/SBLoader/TriangleLayer.swift"; sourceTree = "<group>"; };
-		2A50A2221D2C724000C851BD /* RectangleLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RectangleLayer.swift; path = "../../../../../Downloads/SBLoader - Finished/SBLoader/RectangleLayer.swift"; sourceTree = "<group>"; };
-		2A50A2241D2C724600C851BD /* ArcLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArcLayer.swift; path = "../../../../../Downloads/SBLoader - Finished/SBLoader/ArcLayer.swift"; sourceTree = "<group>"; };
-		2A50A2261D2C725500C851BD /* HolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HolderView.swift; path = "../../../../Downloads/SBLoader - Finished/SBLoader/HolderView.swift"; sourceTree = "<group>"; };
-		2A50A2281D2C726B00C851BD /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = "../../../../../Downloads/SBLoader - Finished/SBLoader/Colors.swift"; sourceTree = "<group>"; };
-		2A50A22C1D2C744D00C851BD /* SplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		5EF9363ADAC9DD340A28A896 /* Pods-Wilson.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wilson.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wilson/Pods-Wilson.release.xcconfig"; sourceTree = "<group>"; };
 		64B32A2B7AA97AD0E3355EC0 /* Pods-Wilson.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wilson.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wilson/Pods-Wilson.debug.xcconfig"; sourceTree = "<group>"; };
 		817A4B381D2C5E8E0082D508 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -96,18 +82,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2A50A21D1D2C721500C851BD /* SplashScreen */ = {
-			isa = PBXGroup;
-			children = (
-				2A50A2281D2C726B00C851BD /* Colors.swift */,
-				2A50A21E1D2C723100C851BD /* OvalLayer.swift */,
-				2A50A2201D2C723B00C851BD /* TriangleLayer.swift */,
-				2A50A2221D2C724000C851BD /* RectangleLayer.swift */,
-				2A50A2241D2C724600C851BD /* ArcLayer.swift */,
-			);
-			path = SplashScreen;
-			sourceTree = "<group>";
-		};
 		5ADFEB175F026C95CAEDFFD6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				C8A865741CD7FB2600CFCEC1 /* LoginViewController.swift */,
-				2A50A22C1D2C744D00C851BD /* SplashScreen.swift */,
 				C8A8658B1CD8080300CFCEC1 /* SignUpViewController.swift */,
 				C8E1DD471CD8328000C4910C /* EventsTableViewController.swift */,
 				C8C5CE8F1CDC13D4003A6755 /* DetailTableViewController.swift */,
@@ -189,8 +162,6 @@
 		C842909E1CD3984800A87EF5 /* Wilson */ = {
 			isa = PBXGroup;
 			children = (
-				2A50A21D1D2C721500C851BD /* SplashScreen */,
-				2A50A2261D2C725500C851BD /* HolderView.swift */,
 				C84290A31CD3984800A87EF5 /* Main.storyboard */,
 				8184434B1D2C29B000221350 /* HelperFiles */,
 				8184434F1D2C2A3D00221350 /* Helpers */,
@@ -361,26 +332,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A50A22D1D2C744D00C851BD /* SplashScreen.swift in Sources */,
 				C8E1DD4A1CD835CE00C4910C /* EventTableViewCell.swift in Sources */,
-				2A50A2251D2C724600C851BD /* ArcLayer.swift in Sources */,
-				2A50A2231D2C724000C851BD /* RectangleLayer.swift in Sources */,
 				C8C5CE901CDC13D4003A6755 /* DetailTableViewController.swift in Sources */,
 				C8E1DD441CD831BB00C4910C /* Event.swift in Sources */,
 				C873F17B1CDCE6870024EA72 /* DataService.swift in Sources */,
 				C8A8658C1CD8080300CFCEC1 /* SignUpViewController.swift in Sources */,
 				C8C5CE941CDC3242003A6755 /* TakePhotoViewController.swift in Sources */,
-				2A50A2211D2C723B00C851BD /* TriangleLayer.swift in Sources */,
 				C873F17D1CDCE9B60024EA72 /* StreamCollectionViewCell.swift in Sources */,
 				C8A865751CD7FB2600CFCEC1 /* LoginViewController.swift in Sources */,
 				C873F1771CDCE4B00024EA72 /* StreamCollectionViewController.swift in Sources */,
-				2A50A2291D2C726B00C851BD /* Colors.swift in Sources */,
-				2A50A2271D2C725500C851BD /* HolderView.swift in Sources */,
 				C8C5CE921CDC3235003A6755 /* ButtonsPhotosViewController.swift in Sources */,
 				C8E1DD481CD8328000C4910C /* EventsTableViewController.swift in Sources */,
 				C873F17A1CDCE6870024EA72 /* Constants.swift in Sources */,
 				C84290A01CD3984800A87EF5 /* AppDelegate.swift in Sources */,
-				2A50A21F1D2C723100C851BD /* OvalLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

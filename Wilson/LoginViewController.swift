@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import VideoSplashKit
 
 class LoginViewController: UIViewController {
     
@@ -23,7 +24,6 @@ class LoginViewController: UIViewController {
         //Set Radius to Button
         signInButton.layer.cornerRadius = 20
         signInButton.clipsToBounds = true
-        
     }
     
     
