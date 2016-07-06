@@ -53,8 +53,13 @@ class SignUpViewController: UIViewController {
                                             completion: { user,error in
             if error != nil {
                 // There was an error creating the account
+                
+                print("Error Creating the user: \(error)")
+                
             } else {
                 print("Successfully created user account with uid: \(user)")
+                //Declare next View Controller
+                self.performSegueWithIdentifier("goToEvents", sender: self)
             }
         })
     }

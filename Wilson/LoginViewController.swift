@@ -24,7 +24,18 @@ class LoginViewController: UIViewController {
         //Set Radius to Button
         signInButton.layer.cornerRadius = 20
         signInButton.clipsToBounds = true
-    }
+        
+        //Check if User is Signed in
+        FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
+            if let user = user {
+                
+                //User is Signed In
+                self.performSegueWithIdentifier("goToEvents", sender: self)
+                print(user)
+
+            }//Closes If
+        }//Closes FIRAuth.auth()?
+    }//Closes Did Load
     
     
     //Did Layout Subviews
@@ -57,16 +68,41 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //Sign In
+    //User Log In
     @IBAction func SignIn(sender: AnyObject) {
+        //Get Data
+        let emailuser = inputEmail.text
+        let password = inputPassword.text
         
-        FIRAuth.auth()?.signInWithEmail(inputEmail.text!, password: inputPassword.text!,
-                     completion: { error, authData in
-            if error != nil {
-                print("No user");
-            } else {
-                print("All Good");
-            }
-        })
-    }
-}
+        //Check if Empty
+        if(emailuser != "" || password != ""){
+            
+            FIRAuth.auth()?.signInWithEmail(emailuser!, password: password!) { (user, error) in
+                
+                //Check if we have any errors.
+                if (error == nil){
+                    
+                    //Declare next View Controller
+                    self.performSegueWithIdentifier("goToEvents", sender: self)
+                
+                //We Have an error.
+                } else {
+                    
+                    //User Not Found or error of login in
+                    print("Error login in\(error)")
+                    
+                } //Else
+                
+            }//Closes FIRAuth.auth()
+        
+        } else {
+            
+            print("run Error empty fields")
+        
+        }//Else
+        
+        
+    }//IBAction
+    
+    
+}//Ends  Class

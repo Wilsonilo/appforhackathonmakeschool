@@ -149,7 +149,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="HMO-i8-oKz" kind="show" id="cTM-WR-rWE"/>
+                                    <segue destination="HMO-i8-oKz" kind="show" identifier="goToEvents" id="cTM-WR-rWE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -215,7 +215,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="148"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="byX-N1-qnC" id="wnX-DI-Czt">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="147"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="147.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bDB-rT-hYD">
@@ -404,7 +404,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="O9L-F4-Svh" kind="show" id="7JY-Mg-vxn"/>
+                                    <segue destination="O9L-F4-Svh" kind="show" identifier="addPhotosSegue" id="7JY-Mg-vxn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxR-nA-UWI">
@@ -416,7 +416,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="mvu-cV-QEk" kind="show" id="ckE-Sn-pTJ"/>
+                                    <segue destination="mvu-cV-QEk" kind="show" identifier="showStreamSegue" id="ckE-Sn-pTJ"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6rS-Nc-d85">
@@ -796,6 +796,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="cTM-WR-rWE"/>
         <segue reference="ckE-Sn-pTJ"/>
-        <segue reference="coF-Da-O2P"/>
+        <segue reference="34U-WB-9Ko"/>
     </inferredMetricsTieBreakers>
 </document>

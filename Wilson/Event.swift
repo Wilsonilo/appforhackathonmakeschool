@@ -13,4 +13,5 @@ class Event {
     var image:String = ""
     var url:String = ""
     var address:String = ""
+    var id:String = ""
 }

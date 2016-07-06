@@ -27,8 +27,10 @@ class DetailTableViewController: UIViewController {
     var EventName:String!
     var EventCity:String!
     var EventRegion:String!
+    var EventID:String!
     let gradientLayer = CAGradientLayer()
 
+    //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,13 +40,46 @@ class DetailTableViewController: UIViewController {
         LabelCity.text = EventCity
         LabelState.text = EventRegion
         MainImageView.contentMode = .ScaleAspectFit
+        
         //Show Main Image
         if let url  = NSURL(string:EventImageUrl) {
+            
             let img = UIImage(named: "photoalbum.png")
             MainImageView.sd_setImageWithURL(url, placeholderImage: img) {
                 (img, err, cacheType, imgUrl) -> Void in
             }
             MainImageView.clipsToBounds = true
-        }
-    }
-}
+            
+        }//Closes if
+        
+    }//Closes View Did Load
+    
+    
+    // MARK: Prepare for Segue
+    
+    //Prepare for Segues
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
+        //First Segue is for the Photo Options.
+        if segue.identifier == "addPhotosSegue" {
+                let buttonsViewController = segue.destinationViewController as! ButtonsPhotosViewController
+                
+                //Send id to View Controller to save in metadata
+                buttonsViewController.eventID = EventID
+                
+        }//Closes If
+        
+        
+        //Second Segue is for the Stream Options.
+        if segue.identifier == "showStreamSegue" {
+            let streamCollection = segue.destinationViewController as! StreamCollectionViewController
+            
+            //Send id to View Controller to save in metadata
+            streamCollection.eventID = EventID
+            
+        }//Closes If
+        
+    }//Closes prepareForSegue
+    
+    
+}//Closes Class

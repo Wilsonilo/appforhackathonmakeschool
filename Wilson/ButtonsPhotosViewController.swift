@@ -13,7 +13,7 @@ class ButtonsPhotosViewController: UIViewController, UIImagePickerControllerDele
 
     //MARK: Vars
     var myImage : UIImage!
-
+    var eventID: String!
 
     @IBAction func SelectPhotoFromLibrary(sender: AnyObject) {
         
@@ -47,6 +47,7 @@ class ButtonsPhotosViewController: UIViewController, UIImagePickerControllerDele
         if segue.identifier == "PhotoLibrarySegue" {
             let destinationController = segue.destinationViewController as! TakePhotoViewController
                 destinationController.myImage = myImage
+                destinationController.eventID = eventID
         }
     }
     
