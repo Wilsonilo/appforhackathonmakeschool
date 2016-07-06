@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import Firebase
 
 class EventsTableViewController: UITableViewController {
     
@@ -19,6 +20,7 @@ class EventsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getLatestLoans()
+        
     }
 
     override func didReceiveMemoryWarning() {
