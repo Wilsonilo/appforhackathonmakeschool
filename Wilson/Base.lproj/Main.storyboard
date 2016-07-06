@@ -480,7 +480,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6cK-a4-nct">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6cK-a4-nct" customClass="SpringImageView" customModule="Spring">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         </imageView>
                                     </subviews>
@@ -795,7 +795,7 @@
         <image name="user-icon" width="44" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3Xk-Ms-mQS"/>
+        <segue reference="cTM-WR-rWE"/>
         <segue reference="ckE-Sn-pTJ"/>
         <segue reference="34U-WB-9Ko"/>
     </inferredMetricsTieBreakers>
