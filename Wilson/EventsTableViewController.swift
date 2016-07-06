@@ -8,8 +8,14 @@
 
 import UIKit
 import SDWebImage
+import Firebase
 
 class EventsTableViewController: UITableViewController {
+    
+    @IBAction func logoutButtonTapped(sender: AnyObject) {
+        try! FIRAuth.auth()?.signOut()
+        self.performSegueWithIdentifier("logout", sender: <#T##AnyObject?#>)
+    }
     
     //Using Prototype Data
     //For real live data change to (50 calls per day): http://api.eventful.com/json/events/search?location=San+Francisco&app_key=tMPDGBjnXGVq87jZ
