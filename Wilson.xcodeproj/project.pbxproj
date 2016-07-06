@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		11F20A8566FEF19E8EE16885 /* Pods_Wilson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF59CF80F255C19FB8FAFD84 /* Pods_Wilson.framework */; };
-		2A50A21F1D2C723100C851BD /* OvalLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A21E1D2C723100C851BD /* OvalLayer.swift */; };
-		2A50A2211D2C723B00C851BD /* TriangleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A2201D2C723B00C851BD /* TriangleLayer.swift */; };
-		2A50A2231D2C724000C851BD /* RectangleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A2221D2C724000C851BD /* RectangleLayer.swift */; };
-		2A50A2251D2C724600C851BD /* ArcLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A2241D2C724600C851BD /* ArcLayer.swift */; };
-		2A50A2271D2C725500C851BD /* HolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A2261D2C725500C851BD /* HolderView.swift */; };
-		2A50A2291D2C726B00C851BD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A2281D2C726B00C851BD /* Colors.swift */; };
 		2A6FAB6E1D2D7D3400B0889F /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6FAB6D1D2D7D3400B0889F /* SplashScreenViewController.swift */; };
 		817A4B391D2C5E8E0082D508 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 817A4B381D2C5E8E0082D508 /* GoogleService-Info.plist */; };
+		81AA44391D2DB70100F3147E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A2281D2C726B00C851BD /* Colors.swift */; };
+		81AA443A1D2DB70400F3147E /* HolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A2261D2C725500C851BD /* HolderView.swift */; };
+		81AA443E1D2DB70A00F3147E /* OvalLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A21E1D2C723100C851BD /* OvalLayer.swift */; };
+		81AA443F1D2DB70A00F3147E /* TriangleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A2201D2C723B00C851BD /* TriangleLayer.swift */; };
+		81AA44401D2DB70A00F3147E /* RectangleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A2221D2C724000C851BD /* RectangleLayer.swift */; };
+		81AA44411D2DB70A00F3147E /* ArcLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50A2241D2C724600C851BD /* ArcLayer.swift */; };
 		C84290A01CD3984800A87EF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C842909F1CD3984800A87EF5 /* AppDelegate.swift */; };
 		C84290A51CD3984800A87EF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84290A31CD3984800A87EF5 /* Main.storyboard */; };
 		C84290AA1CD3984800A87EF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84290A81CD3984800A87EF5 /* LaunchScreen.storyboard */; };
@@ -363,6 +363,9 @@
 			files = (
 				C8E1DD4A1CD835CE00C4910C /* EventTableViewCell.swift in Sources */,
 				C8C5CE901CDC13D4003A6755 /* DetailTableViewController.swift in Sources */,
+				81AA44401D2DB70A00F3147E /* RectangleLayer.swift in Sources */,
+				81AA443E1D2DB70A00F3147E /* OvalLayer.swift in Sources */,
+				81AA443F1D2DB70A00F3147E /* TriangleLayer.swift in Sources */,
 				C8E1DD441CD831BB00C4910C /* Event.swift in Sources */,
 				C873F17B1CDCE6870024EA72 /* DataService.swift in Sources */,
 				C8A8658C1CD8080300CFCEC1 /* SignUpViewController.swift in Sources */,
@@ -370,12 +373,14 @@
 				C873F17D1CDCE9B60024EA72 /* StreamCollectionViewCell.swift in Sources */,
 				C8A865751CD7FB2600CFCEC1 /* LoginViewController.swift in Sources */,
 				C873F1771CDCE4B00024EA72 /* StreamCollectionViewController.swift in Sources */,
+				81AA44411D2DB70A00F3147E /* ArcLayer.swift in Sources */,
+				81AA44391D2DB70100F3147E /* Colors.swift in Sources */,
 				C8C5CE921CDC3235003A6755 /* ButtonsPhotosViewController.swift in Sources */,
 				C8E1DD481CD8328000C4910C /* EventsTableViewController.swift in Sources */,
 				C873F17A1CDCE6870024EA72 /* Constants.swift in Sources */,
 				C84290A01CD3984800A87EF5 /* AppDelegate.swift in Sources */,
 				2A6FAB6E1D2D7D3400B0889F /* SplashScreenViewController.swift in Sources */,
-				2A50A21F1D2C723100C851BD /* OvalLayer.swift in Sources */,
+				81AA443A1D2DB70400F3147E /* HolderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

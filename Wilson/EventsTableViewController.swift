@@ -14,7 +14,7 @@ class EventsTableViewController: UITableViewController {
     
     @IBAction func logoutButtonTapped(sender: AnyObject) {
         try! FIRAuth.auth()?.signOut()
-        self.performSegueWithIdentifier("logout", sender: <#T##AnyObject?#>)
+        //self.performSegueWithIdentifier("logout", sender: <#T##AnyObject?#>)
     }
     
     //Using Prototype Data
