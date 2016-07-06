@@ -8,41 +8,73 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>Pods-Wilson.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Spring.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 		<key>SwiftSpinner.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>VideoSplashKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0F9A8DA5C7ADB3F38189293BA1911343</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1BCD1A6B86771908855146186A755935</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>2567E9D45E9E1EA073B463056C0992BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2CBA64B8521AFCBA3B1E110C03C6DB82</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>34260537904D2021F453F0A1FBD03925</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -58,6 +90,21 @@
 			<true/>
 		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D2FFF03E6859B03001B92E1494113A03</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DEBD398198E41176DE48503D66955B02</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE2731814805A03124ACA3B5321315DC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
