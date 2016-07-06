@@ -48,15 +48,18 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func SignUp(sender: AnyObject) {
-        print(InputEmail.text)
-        print(InputPassword.text)
         
         FIRAuth.auth()?.createUserWithEmail(InputEmail.text!, password: InputPassword.text!,
                                             completion: { user,error in
             if error != nil {
                 // There was an error creating the account
+                
+                print("Error Creating the user: \(error)")
+                
             } else {
                 print("Successfully created user account with uid: \(user)")
+                //Declare next View Controller
+                self.performSegueWithIdentifier("goToEvents", sender: self)
             }
         })
     }

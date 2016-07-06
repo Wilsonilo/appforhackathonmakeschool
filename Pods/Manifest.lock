@@ -58,6 +58,7 @@ PODS:
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
+  - Spring (1.0.3)
   - SwiftSpinner (0.9.5)
   - SwiftyJSON (2.3.2)
   - VideoSplashKit (1.1.0)
@@ -71,9 +72,20 @@ DEPENDENCIES:
   - Firebase/Messaging
   - Firebase/Storage
   - SDWebImage (~> 3.7)
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
   - SwiftSpinner
   - SwiftyJSON
   - VideoSplashKit
+
+EXTERNAL SOURCES:
+  Spring:
+    :branch: swift2
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: 18d5c7b74489de8044e34767f856d1e574f0820e
+    :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
@@ -91,10 +103,11 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftSpinner: c6585a0ae5c67eb33e737695cce88f0262008cce
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   VideoSplashKit: 0aa63d0bb37c5bd357de3e6a2a13dea5acad4d66
 
-PODFILE CHECKSUM: c45128c05564bc0d58710a01333e7d2029f085c1
+PODFILE CHECKSUM: 788c53e6238b40b4b58bb890fdd69b7f60770a92
 
 COCOAPODS: 1.0.1

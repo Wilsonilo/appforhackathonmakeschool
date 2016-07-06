@@ -108,6 +108,7 @@ class EventsTableViewController: UITableViewController {
                 }
 
                 event.address = jsonEvent["city_name"] as! String
+                event.id = jsonEvent["id"] as! String
                 events.append(event)
             }
         } catch {
@@ -128,6 +129,7 @@ class EventsTableViewController: UITableViewController {
                 destinationController.EventCity = events[indexPath.row].address
                 destinationController.EventRegion = events[indexPath.row].url
                 destinationController.EventImageUrl = events[indexPath.row].image
+                destinationController.EventID = events[indexPath.row].id
                 
             }
         }

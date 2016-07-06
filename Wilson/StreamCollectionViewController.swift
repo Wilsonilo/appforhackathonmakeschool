@@ -14,21 +14,33 @@ private let reuseIdentifier = "Cell"
 
 class StreamCollectionViewController: UICollectionViewController {
     
+    //VARS
     var imagenes: [AnyObject] = []
-
+    var eventID: String!
+    
+    //DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        DataService.dataService.IMAGES_REF.observeEventType(.Value, withBlock: { snapshot in
-            self.imagenes.insert(snapshot.value!, atIndex: 0)
-            self.collectionView?.reloadData()
+        
+        //Get Ref of the selected Event.
+        let imagesRef = FIRDatabase.database().reference().child("events/" + self.eventID)
+        imagesRef.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
             
-            }, withCancelBlock: { error in
-                print(error.description)
+            //let postDict = snapshot.value as! [String : AnyObject]
+            
+            //Get Data and append urls to "imagenes"
+            let data = snapshot.value as! Dictionary<String, String>
+            for foto in data{
+                self.imagenes.append(foto.1)
+            }
+            self.collectionView?.reloadData()
+
+            
         })
         
-    }
-
+    }//Closes Did Load
+    
+    //Memory Warning
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -49,22 +61,21 @@ class StreamCollectionViewController: UICollectionViewController {
     
         let cellIdentifier = "Cell"
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath:indexPath) as! StreamCollectionViewCell
-        
-        DataService.dataService.IMAGES_REF.observeEventType(.Value, withBlock: { snapshot in
-            
-            print(self.imagenes.count)
-            
-            let imageString = self.imagenes[indexPath.row]["image"] as! [String:AnyObject]
-            let base64EncodedString = imageString["string"]
-            let imageData = NSData(base64EncodedString: base64EncodedString as! String,
-                options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)
-            let image = UIImage(data: imageData!)
-            cell.ImageStream.image = image
-        
-            }, withCancelBlock: { error in
+        for image in imagenes{
+            //Show Main Image
+            if let url  = NSURL(string:image as! String) {
                 
-                print(error.description)
-        })        
+                let img = UIImage(named: "photoalbum.png")
+                cell.ImageStream.sd_setImageWithURL(url, placeholderImage: img) {
+                    (img, err, cacheType, imgUrl) -> Void in
+                }
+                cell.ImageStream.clipsToBounds = true
+                
+            }//Closes if
+            
+        }
+        
+        
         return cell
     }
 }

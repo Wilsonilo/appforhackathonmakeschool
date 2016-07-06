@@ -13,5 +13,7 @@ pod 'SwiftSpinner'
 pod 'VideoSplashKit'
 pod 'SwiftyJSON'
 pod 'Alamofire'
+pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
+
 end
 
