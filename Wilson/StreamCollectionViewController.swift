@@ -11,7 +11,9 @@ import UIKit
 import Firebase
 import Spring
 import SwiftSpinner
-
+import SDWebImage
+import UIActivityIndicator_for_SDWebImage
+import AlamofireImage
 
 private let reuseIdentifier = "Cell"
 
@@ -25,6 +27,7 @@ class StreamCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.collectionView?.backgroundColor = UIColor.whiteColor()
         
         //Get Ref of the selected Event.
         let imagesRef = FIRDatabase.database().reference().child("events/" + self.eventID)
@@ -76,32 +79,46 @@ class StreamCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath:indexPath) as! StreamCollectionViewCell
         
         //Hide Spinner
-        SwiftSpinner.hide()
+        //SwiftSpinner.hide()
     
         //Animate Images
         cell.ImageStream.clipsToBounds = true
         cell.ImageStream.scaleX = 2.0
         cell.ImageStream.scaleY = 2.0
         cell.ImageStream.duration = 0.8
-        cell.ImageStream.curve = "easeOut"
+        cell.ImageStream.curve = "easeIn"
         cell.ImageStream.animateTo()
         
             //Loop Images
             if let url  = NSURL(string:images[indexPath.row] as! String) {
                 
+                cell.ImageStream.clipsToBounds = true
+                cell.ImageStream.scaleX = 1.0
+                cell.ImageStream.scaleY = 1.0
+                cell.ImageStream.duration = 0.8
+                cell.ImageStream.curve = "easeOut"
+                cell.ImageStream.animateTo()
+                
                 //Set images from URL, also get placeholder
-                let img = UIImage(named: "photoalbum.png")
-                cell.ImageStream.sd_setImageWithURL(url, placeholderImage: img) {
-                    (img, err, cacheType, imgUrl) -> Void in
+                //let placeholder = UIImage(named: "photoalbum")!
+                cell.ImageStream.setImageWithURL(url, placeholderImage: nil, options: SDWebImageOptions.RetryFailed, progress:{(receivedSize: Int!, expectedSize: Int!) in
                     
-                    //Animate
-                    cell.ImageStream.clipsToBounds = true
-                    cell.ImageStream.scaleX = 1.0
-                    cell.ImageStream.scaleY = 1.0
-                    cell.ImageStream.duration = 2.5
-                    cell.ImageStream.curve = "easeIn"
-                    cell.ImageStream.animateTo()
-                }
+                       
+                    
+                    
+                    }, completed: nil, usingActivityIndicatorStyle: .Gray)
+//                let imageViewFrameSize = cell.ImageStream.frame.size
+//                let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
+//                    size: imageViewFrameSize,
+//                    radius: 50.0
+//                )
+//                cell.ImageStream.af_setImageWithURL(
+//                    url,
+//                    placeholderImage: placeholder,
+//                    filter: filter,
+//                    imageTransition: .CrossDissolve(1.2)
+//
+//                )
 
         }
         return cell
@@ -110,7 +127,7 @@ class StreamCollectionViewController: UICollectionViewController {
     //View will Appear
     override func viewWillAppear(animated: Bool) {
         //Prepare Spinner
-        SwiftSpinner.show("Loading Stream... 1 sec please :)")
+        //SwiftSpinner.show("Loading Stream... 1 sec please :)")
     }
     
     

@@ -12,6 +12,15 @@
 		C84290A01CD3984800A87EF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C842909F1CD3984800A87EF5 /* AppDelegate.swift */; };
 		C84290A51CD3984800A87EF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84290A31CD3984800A87EF5 /* Main.storyboard */; };
 		C84290AA1CD3984800A87EF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84290A81CD3984800A87EF5 /* LaunchScreen.storyboard */; };
+		C87022B01D2DBCF30036851A /* Bridging.m in Sources */ = {isa = PBXBuildFile; fileRef = C87022AF1D2DBCF30036851A /* Bridging.m */; };
+		C87022B31D2EB85D0036851A /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87022B21D2EB85D0036851A /* TimelineView.swift */; };
+		C87022C11D2EB8920036851A /* JTSAnimatedGIFUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C87022B61D2EB8920036851A /* JTSAnimatedGIFUtility.m */; };
+		C87022C21D2EB8920036851A /* JTSImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C87022B81D2EB8920036851A /* JTSImageInfo.m */; };
+		C87022C31D2EB8920036851A /* JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C87022BA1D2EB8920036851A /* JTSImageViewController.m */; };
+		C87022C41D2EB8920036851A /* JTSSimpleImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = C87022BC1D2EB8920036851A /* JTSSimpleImageDownloader.m */; };
+		C87022C51D2EB8920036851A /* UIApplication+JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C87022BE1D2EB8920036851A /* UIApplication+JTSImageViewController.m */; };
+		C87022C61D2EB8920036851A /* UIImage+JTSImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C87022C01D2EB8920036851A /* UIImage+JTSImageEffects.m */; };
+		C87022C81D2EB9C40036851A /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87022C71D2EB9C40036851A /* TimeLineViewController.swift */; };
 		C873F1771CDCE4B00024EA72 /* StreamCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873F1761CDCE4B00024EA72 /* StreamCollectionViewController.swift */; };
 		C873F17A1CDCE6870024EA72 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873F1781CDCE6870024EA72 /* Constants.swift */; };
 		C873F17B1CDCE6870024EA72 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873F1791CDCE6870024EA72 /* DataService.swift */; };
@@ -46,6 +55,22 @@
 		C84290A41CD3984800A87EF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C84290A91CD3984800A87EF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C84290AB1CD3984800A87EF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C87022AE1D2DBCF30036851A /* Wilson-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Wilson-Bridging-Header.h"; sourceTree = "<group>"; };
+		C87022AF1D2DBCF30036851A /* Bridging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bridging.m; sourceTree = "<group>"; };
+		C87022B21D2EB85D0036851A /* TimelineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		C87022B51D2EB8920036851A /* JTSAnimatedGIFUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSAnimatedGIFUtility.h; sourceTree = "<group>"; };
+		C87022B61D2EB8920036851A /* JTSAnimatedGIFUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSAnimatedGIFUtility.m; sourceTree = "<group>"; };
+		C87022B71D2EB8920036851A /* JTSImageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSImageInfo.h; sourceTree = "<group>"; };
+		C87022B81D2EB8920036851A /* JTSImageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSImageInfo.m; sourceTree = "<group>"; };
+		C87022B91D2EB8920036851A /* JTSImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSImageViewController.h; sourceTree = "<group>"; };
+		C87022BA1D2EB8920036851A /* JTSImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSImageViewController.m; sourceTree = "<group>"; };
+		C87022BB1D2EB8920036851A /* JTSSimpleImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSSimpleImageDownloader.h; sourceTree = "<group>"; };
+		C87022BC1D2EB8920036851A /* JTSSimpleImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSSimpleImageDownloader.m; sourceTree = "<group>"; };
+		C87022BD1D2EB8920036851A /* UIApplication+JTSImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+JTSImageViewController.h"; sourceTree = "<group>"; };
+		C87022BE1D2EB8920036851A /* UIApplication+JTSImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+JTSImageViewController.m"; sourceTree = "<group>"; };
+		C87022BF1D2EB8920036851A /* UIImage+JTSImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JTSImageEffects.h"; sourceTree = "<group>"; };
+		C87022C01D2EB8920036851A /* UIImage+JTSImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JTSImageEffects.m"; sourceTree = "<group>"; };
+		C87022C71D2EB9C40036851A /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		C873F1761CDCE4B00024EA72 /* StreamCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamCollectionViewController.swift; sourceTree = "<group>"; };
 		C873F1781CDCE6870024EA72 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C873F1791CDCE6870024EA72 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
@@ -111,6 +136,7 @@
 				C8C5CE911CDC3235003A6755 /* ButtonsPhotosViewController.swift */,
 				C8C5CE931CDC3241003A6755 /* TakePhotoViewController.swift */,
 				C873F1761CDCE4B00024EA72 /* StreamCollectionViewController.swift */,
+				C87022C71D2EB9C40036851A /* TimeLineViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -143,6 +169,7 @@
 		C84290931CD3984700A87EF5 = {
 			isa = PBXGroup;
 			children = (
+				C87022AE1D2DBCF30036851A /* Wilson-Bridging-Header.h */,
 				C8A865811CD7FDF700CFCEC1 /* fonts */,
 				C842909E1CD3984800A87EF5 /* Wilson */,
 				C842909D1CD3984700A87EF5 /* Products */,
@@ -174,6 +201,34 @@
 			path = Wilson;
 			sourceTree = "<group>";
 		};
+		C87022B11D2EB84D0036851A /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				C87022B41D2EB88B0036851A /* JTSImageViewController */,
+				C87022B21D2EB85D0036851A /* TimelineView.swift */,
+			);
+			name = Timeline;
+			sourceTree = "<group>";
+		};
+		C87022B41D2EB88B0036851A /* JTSImageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C87022B51D2EB8920036851A /* JTSAnimatedGIFUtility.h */,
+				C87022B61D2EB8920036851A /* JTSAnimatedGIFUtility.m */,
+				C87022B71D2EB8920036851A /* JTSImageInfo.h */,
+				C87022B81D2EB8920036851A /* JTSImageInfo.m */,
+				C87022B91D2EB8920036851A /* JTSImageViewController.h */,
+				C87022BA1D2EB8920036851A /* JTSImageViewController.m */,
+				C87022BB1D2EB8920036851A /* JTSSimpleImageDownloader.h */,
+				C87022BC1D2EB8920036851A /* JTSSimpleImageDownloader.m */,
+				C87022BD1D2EB8920036851A /* UIApplication+JTSImageViewController.h */,
+				C87022BE1D2EB8920036851A /* UIApplication+JTSImageViewController.m */,
+				C87022BF1D2EB8920036851A /* UIImage+JTSImageEffects.h */,
+				C87022C01D2EB8920036851A /* UIImage+JTSImageEffects.m */,
+			);
+			name = JTSImageViewController;
+			sourceTree = "<group>";
+		};
 		C8A865811CD7FDF700CFCEC1 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +241,7 @@
 				C8A8657E1CD7FDE800CFCEC1 /* SF-UI-Display-Semibold.ttf */,
 				C8A8657F1CD7FDE800CFCEC1 /* SF-UI-Display-Thin.ttf */,
 				C8A865801CD7FDE800CFCEC1 /* SF-UI-Display-Ultralight.ttf */,
+				C87022AF1D2DBCF30036851A /* Bridging.m */,
 			);
 			name = fonts;
 			sourceTree = "<group>";
@@ -193,6 +249,7 @@
 		F04A1953AC57CA22BEB1D485 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				C87022B11D2EB84D0036851A /* Timeline */,
 				64B32A2B7AA97AD0E3355EC0 /* Pods-Wilson.debug.xcconfig */,
 				5EF9363ADAC9DD340A28A896 /* Pods-Wilson.release.xcconfig */,
 			);
@@ -332,18 +389,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C87022C11D2EB8920036851A /* JTSAnimatedGIFUtility.m in Sources */,
 				C8E1DD4A1CD835CE00C4910C /* EventTableViewCell.swift in Sources */,
+				C87022B01D2DBCF30036851A /* Bridging.m in Sources */,
 				C8C5CE901CDC13D4003A6755 /* DetailTableViewController.swift in Sources */,
 				C8E1DD441CD831BB00C4910C /* Event.swift in Sources */,
 				C873F17B1CDCE6870024EA72 /* DataService.swift in Sources */,
 				C8A8658C1CD8080300CFCEC1 /* SignUpViewController.swift in Sources */,
 				C8C5CE941CDC3242003A6755 /* TakePhotoViewController.swift in Sources */,
+				C87022C61D2EB8920036851A /* UIImage+JTSImageEffects.m in Sources */,
 				C873F17D1CDCE9B60024EA72 /* StreamCollectionViewCell.swift in Sources */,
+				C87022C41D2EB8920036851A /* JTSSimpleImageDownloader.m in Sources */,
 				C8A865751CD7FB2600CFCEC1 /* LoginViewController.swift in Sources */,
 				C873F1771CDCE4B00024EA72 /* StreamCollectionViewController.swift in Sources */,
 				C8C5CE921CDC3235003A6755 /* ButtonsPhotosViewController.swift in Sources */,
+				C87022C51D2EB8920036851A /* UIApplication+JTSImageViewController.m in Sources */,
 				C8E1DD481CD8328000C4910C /* EventsTableViewController.swift in Sources */,
 				C873F17A1CDCE6870024EA72 /* Constants.swift in Sources */,
+				C87022C81D2EB9C40036851A /* TimeLineViewController.swift in Sources */,
+				C87022C31D2EB8920036851A /* JTSImageViewController.m in Sources */,
+				C87022B31D2EB85D0036851A /* TimelineView.swift in Sources */,
+				C87022C21D2EB8920036851A /* JTSImageInfo.m in Sources */,
 				C84290A01CD3984800A87EF5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,7 +534,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.wilsonmunoz.Wilson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Wilson-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -489,7 +555,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.wilsonmunoz.Wilson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Wilson-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;

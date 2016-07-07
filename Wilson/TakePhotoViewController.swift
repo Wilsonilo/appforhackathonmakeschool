@@ -91,8 +91,33 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
                 let storageImagesURL = FIRDatabase.database().reference().child("events/" + self.eventID)
                 
                 //save URL of image inside the events/EVENTID Folder for future Fetching
+                var uid = ""
+                var displaynameuser = ""
+                if let user = FIRAuth.auth()?.currentUser {
+                      displaynameuser = user.email!
+//                    let email = user.email
+//                    let photoUrl = user.photoURL
+                      uid = user.uid;
+                }
                 let downloadURLFinal:String = (downloadURL()?.absoluteString)!
-                storageImagesURL.childByAutoId().setValue(downloadURLFinal)
+                let date = NSDate()
+                let dateFormatter = NSDateFormatter()
+                dateFormatter.dateFormat = "yyyyMMddhhmmss"
+                let dateString = dateFormatter.stringFromDate(date)
+                var dateFinal:NSNumber = 0
+                if let number = Int(dateString) {
+                    dateFinal = NSNumber(integer:number)
+                }
+                let dataFinal = [
+                    "date"      : dateFinal,
+                    "type"      : "image",
+                    "content"   : downloadURLFinal,
+                    "userid"    : uid,
+                    "userdisplay": displaynameuser
+                ]
+                
+            
+                storageImagesURL.childByAutoId().setValue(dataFinal)
                 
                 
                 //Show Alert of Success
@@ -129,7 +154,7 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
     //Prepare for Segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "goToStream" {
-            let streamCollection = segue.destinationViewController as! StreamCollectionViewController
+            let streamCollection = segue.destinationViewController as! TimeLineViewController
             
             //Send id to View Controller to save in metadata
             streamCollection.eventID = self.eventID

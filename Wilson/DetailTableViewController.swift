@@ -72,7 +72,8 @@ class DetailTableViewController: UIViewController {
         
         //Second Segue is for the Stream Options.
         if segue.identifier == "showStreamSegue" {
-            let streamCollection = segue.destinationViewController as! StreamCollectionViewController
+            //let streamCollection = segue.destinationViewController as! StreamCollectionViewController
+            let streamCollection = segue.destinationViewController as! TimeLineViewController
             
             //Send id to View Controller to save in metadata
             streamCollection.eventID = EventID
