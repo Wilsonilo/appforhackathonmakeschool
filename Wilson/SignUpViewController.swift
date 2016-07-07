@@ -22,6 +22,8 @@ class SignUpViewController: UIViewController {
         //Set Radius to Button
         SignUpButtonInside.layer.cornerRadius = 20
         SignUpButtonInside.clipsToBounds = true
+        
+        InputEmail.keyboardType = .EmailAddress
     }
     
     //Did Layout Subviews

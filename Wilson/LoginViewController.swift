@@ -27,6 +27,8 @@ class LoginViewController: UIViewController {
         signInButton.layer.cornerRadius = 20
         signInButton.clipsToBounds = true
         
+        inputEmail.keyboardType = .EmailAddress
+        
         //Check if User is Signed in
         FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
             if let user = user {
