@@ -9,6 +9,7 @@
 import UIKit
 import SDWebImage
 import Firebase
+import SwiftyJSON
 
 class EventsTableViewController: UITableViewController {
     
@@ -91,33 +92,24 @@ class EventsTableViewController: UITableViewController {
     
     func parseJsonData(data: NSData) -> [Event] {
         var events = [Event]()
-        do {
-            let jsonResult = try NSJSONSerialization.JSONObjectWithData(data,
-                                                                        options: NSJSONReadingOptions.MutableContainers) as? NSDictionary
-            // Parse JSON data
-            let jsonEvents = jsonResult?["events"]!["event"] as! [AnyObject]
-            //var jsonEvents = jsonEventsOutside["event"] as [AnyObject]
-            for jsonEvent in jsonEvents {
-                let event = Event()
-                event.name = jsonEvent["title"] as! String
-                event.url = jsonEvent["region_name"] as! String
-                
-                //Check if we have images in this event
-                if let image = jsonEvent["image"]  {
-                    
-                    if (image!["medium"] != nil) {
-                        
-                        event.image = image!["medium"]!!["url"] as! String
-                    
-                    }
+        let json = JSON(data: data)
+        // Parse JSON data
+        let jsons: JSON = json["events"]["event"]
+        for json in jsons.arrayValue {
+            let event = Event()
+            event.name = json["title"].stringValue
+            event.url = json["region_name"].stringValue
+            //Check if we have images in this event
+            if json["image"] != nil {
+                let image = json["image"]
+                if (image["medium"] != nil) {
+                    event.image = image["medium"]["url"].stringValue
                 }
-
-                event.address = jsonEvent["city_name"] as! String
-                event.id = jsonEvent["id"] as! String
-                events.append(event)
             }
-        } catch {
-            print(error)
+
+            event.address = json["city_name"].stringValue
+            event.id = json["id"].stringValue
+            events.append(event)
         }
         return events
     }
