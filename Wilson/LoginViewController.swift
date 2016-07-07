@@ -19,6 +19,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var inputPassword: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     
+    
+    
     //Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +29,31 @@ class LoginViewController: UIViewController {
         signInButton.layer.cornerRadius = 20
         signInButton.clipsToBounds = true
         
+        registerForKeyboardNotifications()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+        inputEmail.delegate = self
+        
+        print(self.view.superview?.frame.origin.y)
     }
     
+    func registerForKeyboardNotifications()
+    {
+        //Adding notifies on keyboard appearing
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWasShown(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillBeHidden(_:)), name: UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    
+    func deregisterFromKeyboardNotifications()
+    {
+        //Removing notifies on keyboard appearing
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
+    }
+
     
     //Did Layout Subviews
     override func viewDidLayoutSubviews(){
@@ -48,6 +73,11 @@ class LoginViewController: UIViewController {
         inputEmail.layer.masksToBounds = true
         inputPassword.layer.addSublayer(borderPassword)
         inputPassword.layer.masksToBounds = true
+        }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     //Did Appeared
@@ -73,5 +103,36 @@ class LoginViewController: UIViewController {
                 print("All Good");
             }
         })
+    }
+    
+    func keyboardWasShown(notification: NSNotification) {
+        var info = notification.userInfo!
+        let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        print(keyboardFrame)
+        
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.view.superview?.frame.origin.y = -100
+        })
+    }
+    
+    func keyboardWillBeHidden(notification: NSNotification) {
+        UIView.animateWithDuration(0.5, animations:{ () -> Void in
+            self.view.superview?.frame.origin.y = 0
+            print(self.view.superview?.frame.origin)
+        })
+    }
+    
+    
+    override func viewWillDisappear(animated: Bool) {
+        deregisterFromKeyboardNotifications()
+    }
+
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
