@@ -262,7 +262,7 @@
                                 <rect key="frame" x="0.0" y="72" width="600" height="148"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="byX-N1-qnC" id="wnX-DI-Czt">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="147"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="147.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bDB-rT-hYD">
@@ -287,7 +287,7 @@
                                                 <constraint firstAttribute="height" constant="21" id="g15-OV-Ege"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="14"/>
-                                            <color key="textColor" red="0.33725490196078434" green="0.0" blue="1" alpha="0.8570043103448276" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Region Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1b3-zb-jMb">
@@ -296,7 +296,7 @@
                                                 <constraint firstAttribute="height" constant="21" id="DpG-np-IfD"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="13"/>
-                                            <color key="textColor" red="0.33725490196078434" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMn-tb-M2f">
@@ -305,7 +305,7 @@
                                                 <constraint firstAttribute="height" constant="30" id="Zeg-F8-7za"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="SFUIDisplay-Light" family="SF UI Display" pointSize="20"/>
-                                            <color key="textColor" red="0.33725490196078434" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -356,7 +356,7 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.11372549019607843" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="AddressLabel" destination="UjU-ps-Y2p" id="u25-On-Hiy"/>
                                     <outlet property="imageCell" destination="bDB-rT-hYD" id="Dn1-yW-nYb"/>
@@ -1041,10 +1041,10 @@
         <image name="user-icon" width="44" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ph3-bC-SQg"/>
-        <segue reference="34U-WB-9Ko"/>
-        <segue reference="yOK-zZ-j4f"/>
+        <segue reference="ac5-fG-lMU"/>
         <segue reference="YLp-6U-xhM"/>
-        <segue reference="fh0-cI-QYQ"/>
+        <segue reference="ogT-83-hAH"/>
+        <segue reference="34U-WB-9Ko"/>
+        <segue reference="ph3-bC-SQg"/>
     </inferredMetricsTieBreakers>
 </document>

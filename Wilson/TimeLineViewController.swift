@@ -31,7 +31,6 @@ class TimeLineViewController: UIViewController {
     @IBOutlet weak var ButtonSend: UIButton!
     @IBOutlet weak var textField: UITextField!
     
-    //viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,35 +53,6 @@ class TimeLineViewController: UIViewController {
         
             //Call Firebase
             getData()
-        
-        //Keyboard Delegate
-        registerForKeyboardNotifications()
-        
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TimeLineViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
-        
-        textField.delegate = self
-    }
-    
-    // Keyboard Did Appear
-    func registerForKeyboardNotifications()
-    {
-        //Adding notifies on keyboard appearing
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWasShown(_:)), name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillBeHidden(_:)), name: UIKeyboardWillHideNotification, object: nil)
-    }
-    
-    // Keyboard Did Leave
-    func deregisterFromKeyboardNotifications()
-    {
-        //Removing notifies on keyboard appearing
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
-    }
-    
-    func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
     }
     
     //Generates Elements for Timeline
@@ -230,40 +200,11 @@ class TimeLineViewController: UIViewController {
         }
     }
     
-    func keyboardWasShown(notification: NSNotification) {
-        var info = notification.userInfo!
-        let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
-        print(keyboardFrame)
-        
-        UIView.animateWithDuration(0.5, animations: { () -> Void in
-            self.view.superview?.frame.origin.y = keyboardFrame.height * -1
-        })
-    }
-    
-    func keyboardWillBeHidden(notification: NSNotification) {
-        UIView.animateWithDuration(0.5, animations:{ () -> Void in
-            self.view.superview?.frame.origin.y = 0
-            print(self.view.superview?.frame.origin)
-        })
-    }
-    
-    
-    override func viewWillDisappear(animated: Bool) {
-        deregisterFromKeyboardNotifications()
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-}
 
-extension TimeLineViewController: UITextFieldDelegate {
 
-    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
 }
