@@ -76,7 +76,7 @@ class TimeLineViewController: UIViewController {
                     
                     
                     let elementinDB = photo.1 as! NSDictionary
-                    
+
                     
                     //Check type of Data.
                     let type = elementinDB["type"] as! String
@@ -199,6 +199,7 @@ class TimeLineViewController: UIViewController {
             getData()
         }
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

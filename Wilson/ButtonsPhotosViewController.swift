@@ -49,6 +49,17 @@ class ButtonsPhotosViewController: UIViewController, UIImagePickerControllerDele
                 destinationController.myImage = myImage
                 destinationController.eventID = eventID
         }
+        
+        if segue.identifier == "TakePhotoSegue" {
+            let destinationController = segue.destinationViewController as! TakePhotoViewController
+            
+            let img = UIImage(named: "freebo_logo.png")
+
+            destinationController.myImage = img
+            destinationController.eventID = eventID
+        }
+        
+        
     }
     
     override func viewDidLoad() {
