@@ -19,7 +19,7 @@ class EventsTableViewController: UITableViewController {
     }
     
     //Using Prototype Data
-    //For real live data change to (50 calls per day): http://api.eventful.com/json/events/search?location=San+Francisco&app_key=tMPDGBjnXGVq87jZ
+    //For real live data change to (50 calls per day): http://api.eventful.com/json/events/search?location=San+Francisco&app_key=tMPDGBjnXGVq87jZ&radius=50&page=1
     let eventsURL = "http://wilsonmunoz.net/makeschool/prototypedata.json"
     var events = [Event]()
 
@@ -131,6 +131,9 @@ class EventsTableViewController: UITableViewController {
             }
         }
     }
-
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 
 }

@@ -180,7 +180,7 @@ public class TimelineView: UIView {
 			let v = blockForTimeFrame(element, imageTag: i)
 			addSubview(v)
 			addConstraints([
-				NSLayoutConstraint(item: v, attribute: .Top, relatedBy: .Equal, toItem: viewFromAbove, attribute: .Bottom, multiplier: 1.0, constant: 10),
+				NSLayoutConstraint(item: v, attribute: .Top, relatedBy: .Equal, toItem: viewFromAbove, attribute: .Bottom, multiplier: 1.0, constant: 0),
 				NSLayoutConstraint(item: v, attribute: .Width, relatedBy: .Equal, toItem: viewFromAbove, attribute: .Width, multiplier: 1.0, constant: 0),
 				])
 			if showBulletOnRight{
@@ -381,6 +381,7 @@ public class TimelineView: UIView {
 	
 	func tapImage(button: UIButton){
 		var imageView: UIImageView? = nil
+        
 		for v in subviews{
 			for w in v.subviews{
 				if w.tag == button.tag && w is UIImageView{
@@ -397,9 +398,33 @@ public class TimelineView: UIView {
 			imageInfo.referenceRect = convertRect(imageFrame, fromView: i)
 			imageInfo.referenceView = self
 			imageViewer = JTSImageViewController(imageInfo: imageInfo, mode: JTSImageViewControllerMode.Image, backgroundStyle: JTSImageViewControllerBackgroundOptions.Blurred)
-			imageViewer!.showFromViewController(UIApplication.sharedApplication().keyWindow?.rootViewController, transition: JTSImageViewControllerTransition.FromOriginalPosition)
+            
+            //sharedApplication().keyWindow?.rootViewController
+        
+
+            if let topController = UIApplication.topViewController() {
+                imageViewer!.showFromViewController(topController, transition: JTSImageViewControllerTransition.FromOriginalPosition)
+            }
+			
 		}
 	}
+}
+
+extension UIApplication {
+    class func topViewController(base: UIViewController? = UIApplication.sharedApplication().keyWindow?.rootViewController) -> UIViewController? {
+        if let nav = base as? UINavigationController {
+            return topViewController(nav.visibleViewController)
+        }
+        if let tab = base as? UITabBarController {
+            if let selected = tab.selectedViewController {
+                return topViewController(selected)
+            }
+        }
+        if let presented = base?.presentedViewController {
+            return topViewController(presented)
+        }
+        return base
+    }
 }
 
 extension UIBezierPath {
