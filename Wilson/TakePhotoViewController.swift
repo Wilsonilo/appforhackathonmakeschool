@@ -39,7 +39,7 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
         ImagePicked.contentMode = .ScaleAspectFit
         self.dismissViewControllerAnimated(true, completion: nil);
     }
-
+    
     //User uses image
     @IBAction func SendPhotoToStream(sender: AnyObject) {
         
@@ -52,10 +52,6 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
         
         // Save image inside an independent Folder with a certain ID
         let imagesRef = storageImages.child(self.eventID)
-        
-        
-        
-        
         let imageRef = imagesRef.child("\(NSUUID().UUIDString).jpg")
         
         
@@ -95,8 +91,33 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
                 let storageImagesURL = FIRDatabase.database().reference().child("events/" + self.eventID)
                 
                 //save URL of image inside the events/EVENTID Folder for future Fetching
+                var uid = ""
+                var displaynameuser = ""
+                if let user = FIRAuth.auth()?.currentUser {
+                    displaynameuser = user.email!
+                    //                    let email = user.email
+                    //                    let photoUrl = user.photoURL
+                    uid = user.uid;
+                }
                 let downloadURLFinal:String = (downloadURL()?.absoluteString)!
-                storageImagesURL.childByAutoId().setValue(downloadURLFinal)
+                let date = NSDate()
+                let dateFormatter = NSDateFormatter()
+                dateFormatter.dateFormat = "yyyyMMddhhmmss"
+                let dateString = dateFormatter.stringFromDate(date)
+                var dateFinal:NSNumber = 0
+                if let number = Int(dateString) {
+                    dateFinal = NSNumber(integer:number)
+                }
+                let dataFinal = [
+                    "date"      : dateFinal,
+                    "type"      : "image",
+                    "content"   : downloadURLFinal,
+                    "userid"    : uid,
+                    "userdisplay": displaynameuser
+                ]
+                
+                
+                storageImagesURL.childByAutoId().setValue(dataFinal)
                 
                 
                 //Show Alert of Success
@@ -111,7 +132,7 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
             }//Else
         }//imageRef.putData
         
-
+        
     }//IBAction Finishes
     
     //VIEW DID LOAD
@@ -122,11 +143,11 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
             ImagePicked.image = myImage
             ImagePicked.contentMode = .ScaleAspectFit
             ButtonUsePhoto.hidden = false
-       
+            
         } else {
-        
+            
             ButtonUsePhoto.hidden = true
-        
+            
         }
     }//View Did load Finishes
     

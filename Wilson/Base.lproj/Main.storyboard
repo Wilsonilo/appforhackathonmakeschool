@@ -665,6 +665,9 @@
                                             <constraint firstAttribute="height" constant="30" id="jQe-Ft-CuA"/>
                                         </constraints>
                                         <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="sendMessage:" destination="dbg-3y-fvG" eventType="touchUpInside" id="Cd9-BY-0eD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1038,10 +1041,10 @@
         <image name="user-icon" width="44" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="ac5-fG-lMU"/>
         <segue reference="YLp-6U-xhM"/>
-        <segue reference="ogT-83-hAH"/>
+        <segue reference="yOK-zZ-j4f"/>
         <segue reference="2Hh-k9-rTi"/>
         <segue reference="34U-WB-9Ko"/>
-        <segue reference="ac5-fG-lMU"/>
     </inferredMetricsTieBreakers>
 </document>
