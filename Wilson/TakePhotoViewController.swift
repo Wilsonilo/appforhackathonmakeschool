@@ -102,18 +102,22 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
                 let downloadURLFinal:String = (downloadURL()?.absoluteString)!
                 let date = NSDate()
                 let dateFormatter = NSDateFormatter()
+                let dateFormatterTwo = NSDateFormatter()
                 dateFormatter.dateFormat = "yyyyMMddhhmmss"
+                dateFormatterTwo.dateFormat = "MM/dd/yyyy hh:mm:ss"
                 let dateString = dateFormatter.stringFromDate(date)
+                let dateStringPretty = dateFormatterTwo.stringFromDate(date)
                 var dateFinal:NSNumber = 0
                 if let number = Int(dateString) {
                     dateFinal = NSNumber(integer:number)
                 }
                 let dataFinal = [
-                    "date"      : dateFinal,
-                    "type"      : "image",
-                    "content"   : downloadURLFinal,
-                    "userid"    : uid,
-                    "userdisplay": displaynameuser
+                    "date"          : dateFinal,
+                    "prettydate"    : dateStringPretty,
+                    "type"          : "image",
+                    "content"       : downloadURLFinal,
+                    "userid"        : uid,
+                    "userdisplay"   : displaynameuser
                 ]
                 
                 

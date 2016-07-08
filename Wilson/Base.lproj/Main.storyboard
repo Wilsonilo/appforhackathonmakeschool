@@ -391,7 +391,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WD4-eP-CLl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WD4-eP-CLl" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the Event" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85P-Rv-4TL">
@@ -449,7 +449,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qo2-XR-VMB">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qo2-XR-VMB" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="0.0" y="70" width="600" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Francisco" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Glw-QD-6ZV">
@@ -538,7 +538,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxR-nA-UWI">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxR-nA-UWI" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="483" y="542" width="97" height="38"/>
                                 <color key="backgroundColor" red="0.82352941176470584" green="0.16470588235294117" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="15"/>
@@ -550,7 +550,7 @@
                                     <segue destination="dbg-3y-fvG" kind="show" identifier="showStreamSegue" id="2Hh-k9-rTi"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6rS-Nc-d85">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6rS-Nc-d85" customClass="SpringImageView" customModule="Spring">
                                 <rect key="frame" x="0.0" y="140" width="600" height="394"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="227" id="8K5-6g-6NP"/>
@@ -561,7 +561,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Mv-iL-m0m">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Mv-iL-m0m" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="20" y="542" width="155" height="38"/>
                                 <color key="backgroundColor" red="0.82352941180000006" green="0.1647058824" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -849,7 +849,7 @@
                                     <action selector="SendPhotoToStream:" destination="Eqs-Ef-GHM" eventType="touchUpInside" id="U7O-wX-xoD"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoalbum" translatesAutoresizingMaskIntoConstraints="NO" id="9Hq-w1-OCe">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="freebo_logo" translatesAutoresizingMaskIntoConstraints="NO" id="9Hq-w1-OCe">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="534"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -1035,16 +1035,16 @@
     <resources>
         <image name="16661" width="3264" height="2448"/>
         <image name="18199" width="4928" height="3264"/>
+        <image name="freebo_logo" width="1050" height="556"/>
         <image name="password-icon" width="40" height="46"/>
-        <image name="photoalbum" width="84" height="84"/>
         <image name="previous" width="34" height="60"/>
         <image name="user-icon" width="44" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ac5-fG-lMU"/>
         <segue reference="YLp-6U-xhM"/>
-        <segue reference="yOK-zZ-j4f"/>
-        <segue reference="2Hh-k9-rTi"/>
+        <segue reference="ogT-83-hAH"/>
         <segue reference="34U-WB-9Ko"/>
+        <segue reference="ph3-bC-SQg"/>
     </inferredMetricsTieBreakers>
 </document>

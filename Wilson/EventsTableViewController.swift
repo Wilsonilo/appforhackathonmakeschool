@@ -55,7 +55,7 @@ class EventsTableViewController: UITableViewController {
         cell.urlLabel.text = events[indexPath.row].url
         //Declare the url and placeholder
         if let url  = NSURL(string:events[indexPath.row].image) {
-            let img = UIImage(named: "photoalbum.png")
+            let img = UIImage(named: "freebo_logo.png")
             cell.imageCell.sd_setImageWithURL(url, placeholderImage: img) {
                 (img, err, cacheType, imgUrl) -> Void in
             }

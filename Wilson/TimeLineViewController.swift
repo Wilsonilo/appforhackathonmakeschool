@@ -62,7 +62,6 @@ class TimeLineViewController: UIViewController {
         let imagesRef = FIRDatabase.database().reference().child("events/\(self.eventID)/")
         imagesRef.observeSingleEventOfType(FIRDataEventType.Value, withBlock: { (snapshot) in
             
-            print(snapshot.childrenCount)
             //Get Data and append urls to "imagenes"
             if(snapshot.childrenCount > 0){
                 self.images.removeAll()
@@ -82,18 +81,23 @@ class TimeLineViewController: UIViewController {
                     //Check type of Data.
                     let type = elementinDB["type"] as! String
                     let content = elementinDB["content"] as! String
-                    let date = elementinDB["date"] as! NSNumber
+                    //let date = elementinDB["date"] as! NSNumber
+                    let prettydate = elementinDB["prettydate"] as! String
                     let user = elementinDB["userdisplay"] as! String
                     //let userid = elementinDB["userid"] as! String
-                    
+                    let fullUserEmail = user.characters.split{$0 == "@"}.map(String.init)
+
                     if(type == "text"){
+
                         
-                        let element = TimeFrame(text: content, date: "by \(user)", image: nil)
+                        let element = TimeFrame(text: content, date: "by \(fullUserEmail[0])", image: nil)
                         self.images.append(element)
                         
                     } else {
                         
-                        let element = TimeFrame(text: String(date), date: "by \(user)", image: content)
+
+                        
+                        let element = TimeFrame(text: prettydate, date: "by \(fullUserEmail[0])", image: content)
                         self.images.append(element)
                         
                     }
@@ -102,7 +106,7 @@ class TimeLineViewController: UIViewController {
                     
                     
                 }
-                self.timeline = TimelineView(bulletType: .Circle, timeFrames: self.images)
+                self.timeline = TimelineView(bulletType: .DiamondSlash, timeFrames: self.images)
                 
                 //Add Scroll and Constraints
                 self.scrollView.addSubview(self.timeline)
@@ -143,37 +147,52 @@ class TimeLineViewController: UIViewController {
     //Action
     @IBAction func sendMessage(sender: AnyObject) {
         
+        //If Input not Empty
         if(self.textField.text != nil) {
+            
+            //Create Reference
             let storageImagesURL = FIRDatabase.database().reference().child("events/" + self.eventID)
+            
+            //Get Message from Input Text
             let message:String = self.textField.text!
             
+            //Get User Data
             var uid = ""
             var displaynameuser = ""
             if let user = FIRAuth.auth()?.currentUser {
                 uid = user.uid;
                 displaynameuser = user.email!
-
             }
             
+            
+            //Get Dates for Range and another for the Timeline
             let date = NSDate()
             let dateFormatter = NSDateFormatter()
+            let dateFormatterTwo = NSDateFormatter()
             dateFormatter.dateFormat = "yyyyMMddhhmmss"
+            dateFormatterTwo.dateFormat = "MM/dd/yyyy hh:mm:ss"
             let dateString = dateFormatter.stringFromDate(date)
+            let dateStringPretty = dateFormatterTwo.stringFromDate(date)
             var dateFinal:NSNumber = 0
             if let number = Int(dateString) {
                 dateFinal = NSNumber(integer:number)
             }
-
+            
+            //Create Dic of Data
             let dataFinal = [
-                "date"      : dateFinal,
-                "type"      : "text",
-                "content"   : message,
-                "userid"      : uid,
-                "userdisplay": displaynameuser
+                "date"          : dateFinal,
+                "prettydate"    : dateStringPretty,
+                "type"          : "text",
+                "content"       : message,
+                "userid"        : uid,
+                "userdisplay"   : displaynameuser
 
             ]
-            //let idbasedondate = String(dateFinal)
+            
+            //Save Data
             storageImagesURL.childByAutoId().setValue(dataFinal)
+            
+            //Reset input
             self.textField.text = ""
             
             //Clean and Call Firebase

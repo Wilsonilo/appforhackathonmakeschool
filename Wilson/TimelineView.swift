@@ -87,7 +87,7 @@ public class TimelineView: UIView {
 	/**
 		Color of the larger Date title label in each event.
 	*/
-	public var titleLabelColor: UIColor = UIColor(red: 0/255, green: 180/255, blue: 160/255, alpha: 1){
+	public var titleLabelColor: UIColor = UIColor(red:0.437,  green:0.255,  blue:0.997, alpha:1){
 		didSet{
 			setupContent()
 		}
@@ -166,7 +166,7 @@ public class TimelineView: UIView {
 		guideView.translatesAutoresizingMaskIntoConstraints = false
 		addSubview(guideView)
 		addConstraints([
-			NSLayoutConstraint(item: guideView, attribute: .Top, relatedBy: .Equal, toItem: self, attribute: .Top, multiplier: 1.0, constant: 24),
+			NSLayoutConstraint(item: guideView, attribute: .Top, relatedBy: .Equal, toItem: self, attribute: .Top, multiplier: 1.0, constant: 29),
 			NSLayoutConstraint(item: guideView, attribute: .Left, relatedBy: .Equal, toItem: self, attribute: .Left, multiplier: 1.0, constant: 0),
 			NSLayoutConstraint(item: guideView, attribute: .Width, relatedBy: .Equal, toItem: self, attribute: .Width, multiplier: 1.0, constant: 0),
 			NSLayoutConstraint(item: guideView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 0)
@@ -180,7 +180,7 @@ public class TimelineView: UIView {
 			let v = blockForTimeFrame(element, imageTag: i)
 			addSubview(v)
 			addConstraints([
-				NSLayoutConstraint(item: v, attribute: .Top, relatedBy: .Equal, toItem: viewFromAbove, attribute: .Bottom, multiplier: 1.0, constant: 0),
+				NSLayoutConstraint(item: v, attribute: .Top, relatedBy: .Equal, toItem: viewFromAbove, attribute: .Bottom, multiplier: 1.0, constant: 10),
 				NSLayoutConstraint(item: v, attribute: .Width, relatedBy: .Equal, toItem: viewFromAbove, attribute: .Width, multiplier: 1.0, constant: 0),
 				])
 			if showBulletOnRight{
@@ -257,7 +257,7 @@ public class TimelineView: UIView {
 		
 		let titleLabel = UILabel()
 		titleLabel.translatesAutoresizingMaskIntoConstraints = false
-		titleLabel.font = UIFont(name: "ArialMT", size: 20)
+		titleLabel.font = UIFont(name: "ArialMT", size: 18)
 		titleLabel.textColor = titleLabelColor
 		titleLabel.text = element.date
 		titleLabel.numberOfLines = 0
@@ -277,7 +277,7 @@ public class TimelineView: UIView {
 		
 		let textLabel = UILabel()
 		textLabel.translatesAutoresizingMaskIntoConstraints = false
-		textLabel.font = UIFont(name: "ArialMT", size: 16)
+		textLabel.font = UIFont(name: "ArialMT", size: 14)
 		textLabel.text = element.text
 		textLabel.textColor = detailLabelColor
 		textLabel.numberOfLines = 0
