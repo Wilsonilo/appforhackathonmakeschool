@@ -574,15 +574,15 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxR-nA-UWI">
-                                <rect key="frame" x="464" y="542" width="116" height="38"/>
+                                <rect key="frame" x="483" y="542" width="97" height="38"/>
                                 <color key="backgroundColor" red="0.82352941176470584" green="0.16470588235294117" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="15"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                <state key="normal" title="See All Photos">
+                                <state key="normal" title="See Stream">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="mvu-cV-QEk" kind="show" identifier="showStreamSegue" id="ckE-Sn-pTJ"/>
+                                    <segue destination="dbg-3y-fvG" kind="show" identifier="showStreamSegue" id="2Hh-k9-rTi"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6rS-Nc-d85">
@@ -624,6 +624,89 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iPM-1U-Wjp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2805" y="479"/>
+        </scene>
+        <!--Time Line View Controller-->
+        <scene sceneID="p7z-YK-7mC">
+            <objects>
+                <viewController id="dbg-3y-fvG" customClass="TimeLineViewController" customModule="Wilson" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B6w-Jt-WW7"/>
+                        <viewControllerLayoutGuide type="bottom" id="M4g-tc-66d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XmT-J3-1Ix">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kF8-hG-kl6">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Stream" id="9ND-Dd-O31">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="tSW-UY-8ET">
+                                            <connections>
+                                                <segue destination="MYF-JU-dvH" kind="show" identifier="goToEvents" id="MvU-TO-zrO"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lat-kf-X3J">
+                                <rect key="frame" x="0.0" y="64" width="600" height="496"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c44-QR-qze">
+                                <rect key="frame" x="0.0" y="560" width="600" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bZJ-hI-yqc">
+                                        <rect key="frame" x="20" y="5" width="506" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0E-kR-2rn">
+                                        <rect key="frame" x="546" y="5" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="53d-gO-Yvm"/>
+                                            <constraint firstAttribute="height" constant="30" id="jQe-Ft-CuA"/>
+                                        </constraints>
+                                        <state key="normal" title="Send"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ndi-xN-B5M"/>
+                                    <constraint firstItem="g0E-kR-2rn" firstAttribute="trailing" secondItem="c44-QR-qze" secondAttribute="trailingMargin" id="TfR-vb-Mjr"/>
+                                    <constraint firstItem="g0E-kR-2rn" firstAttribute="leading" secondItem="bZJ-hI-yqc" secondAttribute="trailing" constant="20" id="Xnd-lv-tzI"/>
+                                    <constraint firstItem="bZJ-hI-yqc" firstAttribute="centerY" secondItem="c44-QR-qze" secondAttribute="centerY" id="dKG-pn-q9w"/>
+                                    <constraint firstItem="bZJ-hI-yqc" firstAttribute="leading" secondItem="c44-QR-qze" secondAttribute="leading" constant="20" id="gIW-ba-liN"/>
+                                    <constraint firstItem="g0E-kR-2rn" firstAttribute="centerY" secondItem="c44-QR-qze" secondAttribute="centerY" id="k8f-nN-A2q"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lat-kf-X3J" firstAttribute="top" secondItem="kF8-hG-kl6" secondAttribute="bottom" id="7c5-Ut-mRV"/>
+                            <constraint firstItem="kF8-hG-kl6" firstAttribute="top" secondItem="XmT-J3-1Ix" secondAttribute="top" constant="20" id="VDv-gP-Yyx"/>
+                            <constraint firstAttribute="trailing" secondItem="kF8-hG-kl6" secondAttribute="trailing" id="XWS-eO-1cD"/>
+                            <constraint firstAttribute="trailing" secondItem="Lat-kf-X3J" secondAttribute="trailing" id="cco-L6-qh5"/>
+                            <constraint firstItem="c44-QR-qze" firstAttribute="top" secondItem="Lat-kf-X3J" secondAttribute="bottom" id="cua-Gl-fg1"/>
+                            <constraint firstAttribute="trailing" secondItem="c44-QR-qze" secondAttribute="trailing" id="fbS-in-vgf"/>
+                            <constraint firstItem="c44-QR-qze" firstAttribute="leading" secondItem="XmT-J3-1Ix" secondAttribute="leading" id="gFu-M7-nnv"/>
+                            <constraint firstItem="Lat-kf-X3J" firstAttribute="leading" secondItem="XmT-J3-1Ix" secondAttribute="leading" id="hD6-4h-kNH"/>
+                            <constraint firstItem="kF8-hG-kl6" firstAttribute="leading" secondItem="XmT-J3-1Ix" secondAttribute="leading" id="ton-9c-SwT"/>
+                            <constraint firstItem="M4g-tc-66d" firstAttribute="top" secondItem="c44-QR-qze" secondAttribute="bottom" id="y9q-sq-4uw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ButtonSend" destination="g0E-kR-2rn" id="Dbk-Nh-PeU"/>
+                        <outlet property="bottomView" destination="c44-QR-qze" id="8IN-BA-EM6"/>
+                        <outlet property="textField" destination="bZJ-hI-yqc" id="tcG-Df-wCC"/>
+                        <outlet property="topView" destination="Lat-kf-X3J" id="8b7-ua-LzC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dlT-vh-3K5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4130" y="534"/>
         </scene>
         <!--Stream Collection View Controller-->
         <scene sceneID="8Ib-KU-PoW">
@@ -671,7 +754,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ovx-OE-nzG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3485" y="479"/>
+            <point key="canvasLocation" x="4130" y="1307"/>
         </scene>
         <!--Buttons Photos View Controller-->
         <scene sceneID="0up-bZ-4Q5">
@@ -795,7 +878,7 @@
                     <connections>
                         <outlet property="ButtonUsePhoto" destination="67b-Xq-est" id="3QA-75-sSW"/>
                         <outlet property="ImagePicked" destination="9Hq-w1-OCe" id="I8N-0p-hqT"/>
-                        <segue destination="mvu-cV-QEk" kind="show" identifier="goToStream" id="MIc-cH-iM4"/>
+                        <segue destination="dbg-3y-fvG" kind="show" identifier="goToStream" id="ph3-bC-SQg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMR-wS-O9M" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -960,13 +1043,11 @@
         <image name="user-icon" width="44" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cTM-WR-rWE"/>
-        <segue reference="ckE-Sn-pTJ"/>
+        <segue reference="ogT-83-hAH"/>
+        <segue reference="MvU-TO-zrO"/>
+        <segue reference="2Hh-k9-rTi"/>
         <segue reference="34U-WB-9Ko"/>
-        <segue reference="YLp-6U-xhM"/>
-        <segue reference="cTM-WR-rWE"/>
-        <segue reference="fdl-VX-pHU"/>
         <segue reference="ac5-fG-lMU"/>
-        <segue reference="ckE-Sn-pTJ"/>
+        <segue reference="fdl-VX-pHU"/>
     </inferredMetricsTieBreakers>
 </document>

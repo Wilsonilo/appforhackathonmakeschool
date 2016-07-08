@@ -41,6 +41,14 @@
 		C8E1DD441CD831BB00C4910C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E1DD431CD831BB00C4910C /* Event.swift */; };
 		C8E1DD481CD8328000C4910C /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E1DD471CD8328000C4910C /* EventsTableViewController.swift */; };
 		C8E1DD4A1CD835CE00C4910C /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E1DD491CD835CE00C4910C /* EventTableViewCell.swift */; };
+		C8E8C5731D2F6CDB00684A2A /* JTSAnimatedGIFUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E8C5681D2F6CDB00684A2A /* JTSAnimatedGIFUtility.m */; };
+		C8E8C5741D2F6CDB00684A2A /* JTSImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E8C56A1D2F6CDB00684A2A /* JTSImageInfo.m */; };
+		C8E8C5751D2F6CDB00684A2A /* JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E8C56C1D2F6CDB00684A2A /* JTSImageViewController.m */; };
+		C8E8C5761D2F6CDB00684A2A /* JTSSimpleImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E8C56E1D2F6CDB00684A2A /* JTSSimpleImageDownloader.m */; };
+		C8E8C5771D2F6CDB00684A2A /* UIApplication+JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E8C5701D2F6CDB00684A2A /* UIApplication+JTSImageViewController.m */; };
+		C8E8C5781D2F6CDB00684A2A /* UIImage+JTSImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E8C5721D2F6CDB00684A2A /* UIImage+JTSImageEffects.m */; };
+		C8E8C57C1D2F6D0400684A2A /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E8C57B1D2F6D0400684A2A /* TimelineView.swift */; };
+		C8E8C57E1D2F6D0A00684A2A /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E8C57D1D2F6D0A00684A2A /* TimeLineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +90,20 @@
 		C8E1DD431CD831BB00C4910C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C8E1DD471CD8328000C4910C /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		C8E1DD491CD835CE00C4910C /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		C8E8C5671D2F6CDB00684A2A /* JTSAnimatedGIFUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSAnimatedGIFUtility.h; sourceTree = "<group>"; };
+		C8E8C5681D2F6CDB00684A2A /* JTSAnimatedGIFUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSAnimatedGIFUtility.m; sourceTree = "<group>"; };
+		C8E8C5691D2F6CDB00684A2A /* JTSImageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSImageInfo.h; sourceTree = "<group>"; };
+		C8E8C56A1D2F6CDB00684A2A /* JTSImageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSImageInfo.m; sourceTree = "<group>"; };
+		C8E8C56B1D2F6CDB00684A2A /* JTSImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSImageViewController.h; sourceTree = "<group>"; };
+		C8E8C56C1D2F6CDB00684A2A /* JTSImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSImageViewController.m; sourceTree = "<group>"; };
+		C8E8C56D1D2F6CDB00684A2A /* JTSSimpleImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSSimpleImageDownloader.h; sourceTree = "<group>"; };
+		C8E8C56E1D2F6CDB00684A2A /* JTSSimpleImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSSimpleImageDownloader.m; sourceTree = "<group>"; };
+		C8E8C56F1D2F6CDB00684A2A /* UIApplication+JTSImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+JTSImageViewController.h"; sourceTree = "<group>"; };
+		C8E8C5701D2F6CDB00684A2A /* UIApplication+JTSImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+JTSImageViewController.m"; sourceTree = "<group>"; };
+		C8E8C5711D2F6CDB00684A2A /* UIImage+JTSImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JTSImageEffects.h"; sourceTree = "<group>"; };
+		C8E8C5721D2F6CDB00684A2A /* UIImage+JTSImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JTSImageEffects.m"; sourceTree = "<group>"; };
+		C8E8C57B1D2F6D0400684A2A /* TimelineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		C8E8C57D1D2F6D0A00684A2A /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +161,7 @@
 				C8C5CE931CDC3241003A6755 /* TakePhotoViewController.swift */,
 				C873F1761CDCE4B00024EA72 /* StreamCollectionViewController.swift */,
 				2A6FAB6D1D2D7D3400B0889F /* SplashScreenViewController.swift */,
+				C8E8C57D1D2F6D0A00684A2A /* TimeLineViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -163,6 +186,19 @@
 		8184434F1D2C2A3D00221350 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C8E8C57B1D2F6D0400684A2A /* TimelineView.swift */,
+				C8E8C5671D2F6CDB00684A2A /* JTSAnimatedGIFUtility.h */,
+				C8E8C5681D2F6CDB00684A2A /* JTSAnimatedGIFUtility.m */,
+				C8E8C5691D2F6CDB00684A2A /* JTSImageInfo.h */,
+				C8E8C56A1D2F6CDB00684A2A /* JTSImageInfo.m */,
+				C8E8C56B1D2F6CDB00684A2A /* JTSImageViewController.h */,
+				C8E8C56C1D2F6CDB00684A2A /* JTSImageViewController.m */,
+				C8E8C56D1D2F6CDB00684A2A /* JTSSimpleImageDownloader.h */,
+				C8E8C56E1D2F6CDB00684A2A /* JTSSimpleImageDownloader.m */,
+				C8E8C56F1D2F6CDB00684A2A /* UIApplication+JTSImageViewController.h */,
+				C8E8C5701D2F6CDB00684A2A /* UIApplication+JTSImageViewController.m */,
+				C8E8C5711D2F6CDB00684A2A /* UIImage+JTSImageEffects.h */,
+				C8E8C5721D2F6CDB00684A2A /* UIImage+JTSImageEffects.m */,
 				C873F1791CDCE6870024EA72 /* DataService.swift */,
 			);
 			name = Helpers;
@@ -362,16 +398,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8E1DD4A1CD835CE00C4910C /* EventTableViewCell.swift in Sources */,
+				C8E8C5741D2F6CDB00684A2A /* JTSImageInfo.m in Sources */,
+				C8E8C5761D2F6CDB00684A2A /* JTSSimpleImageDownloader.m in Sources */,
+				C8E8C5771D2F6CDB00684A2A /* UIApplication+JTSImageViewController.m in Sources */,
+				C8E8C5781D2F6CDB00684A2A /* UIImage+JTSImageEffects.m in Sources */,
 				C8C5CE901CDC13D4003A6755 /* DetailTableViewController.swift in Sources */,
 				81AA44401D2DB70A00F3147E /* RectangleLayer.swift in Sources */,
 				81AA443E1D2DB70A00F3147E /* OvalLayer.swift in Sources */,
 				81AA443F1D2DB70A00F3147E /* TriangleLayer.swift in Sources */,
+				C8E8C57E1D2F6D0A00684A2A /* TimeLineViewController.swift in Sources */,
 				C8E1DD441CD831BB00C4910C /* Event.swift in Sources */,
 				C873F17B1CDCE6870024EA72 /* DataService.swift in Sources */,
 				C8A8658C1CD8080300CFCEC1 /* SignUpViewController.swift in Sources */,
 				C8C5CE941CDC3242003A6755 /* TakePhotoViewController.swift in Sources */,
 				C873F17D1CDCE9B60024EA72 /* StreamCollectionViewCell.swift in Sources */,
+				C8E8C5751D2F6CDB00684A2A /* JTSImageViewController.m in Sources */,
 				C8A865751CD7FB2600CFCEC1 /* LoginViewController.swift in Sources */,
+				C8E8C5731D2F6CDB00684A2A /* JTSAnimatedGIFUtility.m in Sources */,
 				C873F1771CDCE4B00024EA72 /* StreamCollectionViewController.swift in Sources */,
 				81AA44411D2DB70A00F3147E /* ArcLayer.swift in Sources */,
 				81AA44391D2DB70100F3147E /* Colors.swift in Sources */,
@@ -380,6 +423,7 @@
 				C873F17A1CDCE6870024EA72 /* Constants.swift in Sources */,
 				C84290A01CD3984800A87EF5 /* AppDelegate.swift in Sources */,
 				2A6FAB6E1D2D7D3400B0889F /* SplashScreenViewController.swift in Sources */,
+				C8E8C57C1D2F6D0400684A2A /* TimelineView.swift in Sources */,
 				81AA443A1D2DB70400F3147E /* HolderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,7 +548,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.wilsonmunoz.Wilson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Wilson/Wilson-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -525,7 +569,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.wilsonmunoz.Wilson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Wilson/Wilson-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
