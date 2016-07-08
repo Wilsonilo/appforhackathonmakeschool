@@ -89,6 +89,8 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
                 //Get URL to Add to DB
                 let downloadURL = metadata!.downloadURL
                 let storageImagesURL = FIRDatabase.database().reference().child("events/" + self.eventID)
+                let storageTimelineURL = FIRDatabase.database().reference().child("timeline/")
+
                 
                 //save URL of image inside the events/EVENTID Folder for future Fetching
                 var uid = ""
@@ -103,7 +105,7 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
                 let date = NSDate()
                 let dateFormatter = NSDateFormatter()
                 let dateFormatterTwo = NSDateFormatter()
-                dateFormatter.dateFormat = "yyyyMMddhhmmss"
+                dateFormatter.dateFormat = "yyyyMMddHHmmss"
                 dateFormatterTwo.dateFormat = "MM/dd/yyyy hh:mm:ss"
                 let dateString = dateFormatter.stringFromDate(date)
                 let dateStringPretty = dateFormatterTwo.stringFromDate(date)
@@ -111,6 +113,13 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
                 if let number = Int(dateString) {
                     dateFinal = NSNumber(integer:number)
                 }
+                
+                var timeStamp = NSDate().timeIntervalSince1970
+                timeStamp = 0 - timeStamp
+                
+                let newitem = storageImagesURL.childByAutoId()
+                let newitemkey = newitem.key
+
                 let dataFinal = [
                     "date"          : dateFinal,
                     "prettydate"    : dateStringPretty,
@@ -120,8 +129,15 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
                     "userdisplay"   : displaynameuser
                 ]
                 
+                //Add Image Data to Event
+                newitem.setValue(dataFinal)
                 
-                storageImagesURL.childByAutoId().setValue(dataFinal)
+                
+                //Save to Timeline
+                let dataTimeline: [String: AnyObject] = [
+                    "\(self.eventID)/\(newitemkey)": timeStamp
+                ]
+                storageTimelineURL.setValue(dataTimeline)
                 
                 
                 //Show Alert of Success
