@@ -104,6 +104,7 @@
 		C8E8C5721D2F6CDB00684A2A /* UIImage+JTSImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JTSImageEffects.m"; sourceTree = "<group>"; };
 		C8E8C57B1D2F6D0400684A2A /* TimelineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		C8E8C57D1D2F6D0A00684A2A /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
+		C8F87BF11D2F7192005CD58C /* Wilson-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Wilson-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +187,7 @@
 		8184434F1D2C2A3D00221350 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C8F87BF11D2F7192005CD58C /* Wilson-Bridging-Header.h */,
 				C8E8C57B1D2F6D0400684A2A /* TimelineView.swift */,
 				C8E8C5671D2F6CDB00684A2A /* JTSAnimatedGIFUtility.h */,
 				C8E8C5681D2F6CDB00684A2A /* JTSAnimatedGIFUtility.m */,
