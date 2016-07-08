@@ -8,12 +8,13 @@ pod 'Firebase/Auth'
 pod 'Firebase/Crash'
 pod 'Firebase/Storage'
 pod 'Firebase/Messaging'
-pod 'SDWebImage', '~>3.7'
 pod 'SwiftSpinner'
-pod 'VideoSplashKit'
 pod 'SwiftyJSON'
+pod 'VideoSplashKit'
 pod 'Alamofire'
+pod 'AlamofireImage', '~> 2.0'
 pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
+pod 'SDWebImage', '~>3.8'
 
 end
 

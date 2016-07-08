@@ -81,10 +81,13 @@
                             <constraint firstItem="sgN-WT-Jc0" firstAttribute="top" secondItem="Som-Ao-o1w" secondAttribute="bottom" constant="455" id="dC7-cq-4qp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="HMO-i8-oKz" kind="show" identifier="goToEventsSplash" id="yUf-WK-uhd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="35p-TL-XME" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1332" y="-226"/>
+            <point key="canvasLocation" x="1194" y="-474"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -173,27 +176,6 @@
                                     <segue destination="ngv-6G-SDR" kind="show" id="fh0-cI-QYQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ee8-uH-g05">
-                                <rect key="frame" x="277" y="28" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.96936265501146834" blue="0.96218421818668298" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="0V5-9f-pgt"/>
-                                    <constraint firstAttribute="height" constant="30" id="IKi-zs-2Qs"/>
-                                    <constraint firstAttribute="width" constant="46" id="jHz-YA-dXy"/>
-                                </constraints>
-                                <state key="normal" title="Temp">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="0V5-9f-pgt"/>
-                                        <exclude reference="IKi-zs-2Qs"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <segue destination="HMO-i8-oKz" kind="show" identifier="goToEvents" id="cTM-WR-rWE"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Freebo." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2T-Ld-KGJ">
                                 <rect key="frame" x="189" y="255" width="222" height="89"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="70"/>
@@ -205,33 +187,27 @@
                         <constraints>
                             <constraint firstItem="CYF-Im-Zpd" firstAttribute="top" secondItem="nLH-qh-3Ml" secondAttribute="bottom" constant="8" id="17x-jT-lSD"/>
                             <constraint firstItem="0X9-UM-JCh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4ZA-Y1-Okx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ee8-uH-g05" secondAttribute="trailing" constant="154" id="5bt-xZ-Oc2"/>
                             <constraint firstItem="cxd-YN-h0p" firstAttribute="top" secondItem="0X9-UM-JCh" secondAttribute="bottom" constant="36" id="6Wt-eg-IyE"/>
                             <constraint firstItem="cxd-YN-h0p" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="9YL-Kb-zKb"/>
                             <constraint firstItem="0X9-UM-JCh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BCZ-MX-cTP"/>
                             <constraint firstItem="nLH-qh-3Ml" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I9e-PT-6Jh"/>
                             <constraint firstItem="3C3-Zj-tTw" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="IsY-Aq-7Vo"/>
                             <constraint firstItem="cxd-YN-h0p" firstAttribute="top" secondItem="0X9-UM-JCh" secondAttribute="top" id="NJY-2G-3Pp"/>
-                            <constraint firstItem="ee8-uH-g05" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="OYg-Gl-2qN"/>
                             <constraint firstItem="cxd-YN-h0p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QEa-4j-mqX"/>
                             <constraint firstItem="3C3-Zj-tTw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="SKI-am-88E"/>
                             <constraint firstItem="cxd-YN-h0p" firstAttribute="top" secondItem="A2T-Ld-KGJ" secondAttribute="bottom" constant="53" id="SRs-Xw-Tx2"/>
                             <constraint firstItem="nLH-qh-3Ml" firstAttribute="top" secondItem="cxd-YN-h0p" secondAttribute="bottom" constant="72" id="VkE-31-f6y"/>
-                            <constraint firstItem="ee8-uH-g05" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="afK-LW-KeE"/>
                             <constraint firstItem="cxd-YN-h0p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dKX-Rp-XhG"/>
                             <constraint firstItem="A2T-Ld-KGJ" firstAttribute="centerY" secondItem="3C3-Zj-tTw" secondAttribute="centerY" id="hXx-ti-ubq"/>
                             <constraint firstItem="CYF-Im-Zpd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hrL-Hw-PRp"/>
                             <constraint firstItem="3C3-Zj-tTw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ihf-BI-PNw"/>
                             <constraint firstItem="3C3-Zj-tTw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lTU-ht-Ebt"/>
                             <constraint firstItem="A2T-Ld-KGJ" firstAttribute="centerX" secondItem="0X9-UM-JCh" secondAttribute="centerX" id="lwr-Cj-tH5"/>
-                            <constraint firstItem="ee8-uH-g05" firstAttribute="centerX" secondItem="0X9-UM-JCh" secondAttribute="centerX" id="ncc-WJ-dec"/>
                             <constraint firstItem="0X9-UM-JCh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vab-4I-RwF"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nLH-qh-3Ml" secondAttribute="bottom" constant="50" id="wt9-Ar-JAS"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="5bt-xZ-Oc2"/>
-                                <exclude reference="afK-LW-KeE"/>
                                 <exclude reference="NJY-2G-3Pp"/>
                             </mask>
                         </variation>
@@ -241,6 +217,7 @@
                         <outlet property="inputEmail" destination="0X9-UM-JCh" id="vJl-Js-a87"/>
                         <outlet property="inputPassword" destination="cxd-YN-h0p" id="kbc-KB-lJN"/>
                         <outlet property="signInButton" destination="nLH-qh-3Ml" id="lbK-jN-YSp"/>
+                        <segue destination="HMO-i8-oKz" kind="show" identifier="goToEvents" id="3YP-yp-kQf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -263,7 +240,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </textAttributes>
                             <items>
-                                <navigationItem title="Title" id="XTH-Pq-W7o">
+                                <navigationItem title="Events" id="XTH-Pq-W7o">
                                     <barButtonItem key="leftBarButtonItem" style="plain" id="0uf-8f-tkQ">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tck-Y7-BYA">
                                             <rect key="frame" x="20" y="7" width="133" height="30"/>
@@ -272,10 +249,10 @@
                                             <state key="normal" title="Logout">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="logoutButtonTapped:" destination="HMO-i8-oKz" eventType="touchUpInside" id="gh8-o6-dpz"/>
+                                            </connections>
                                         </button>
-                                        <connections>
-                                            <action selector="logoutButtonTapped:" destination="HMO-i8-oKz" id="bDg-Xg-REZ"/>
-                                        </connections>
                                     </barButtonItem>
                                 </navigationItem>
                             </items>
@@ -561,18 +538,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Mv-iL-m0m">
-                                <rect key="frame" x="20" y="542" width="155" height="38"/>
-                                <color key="backgroundColor" red="0.82352941180000006" green="0.1647058824" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
-                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                <state key="normal" title="Add Photo to Stream">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="O9L-F4-Svh" kind="show" identifier="addPhotosSegue" id="7JY-Mg-vxn"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxR-nA-UWI">
                                 <rect key="frame" x="483" y="542" width="97" height="38"/>
                                 <color key="backgroundColor" red="0.82352941176470584" green="0.16470588235294117" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
@@ -586,21 +551,45 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6rS-Nc-d85">
-                                <rect key="frame" x="0.0" y="140" width="600" height="227"/>
+                                <rect key="frame" x="0.0" y="140" width="600" height="394"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="227" id="8K5-6g-6NP"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8K5-6g-6NP"/>
+                                    </mask>
+                                </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Mv-iL-m0m">
+                                <rect key="frame" x="20" y="542" width="155" height="38"/>
+                                <color key="backgroundColor" red="0.82352941180000006" green="0.1647058824" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="qPu-fX-6lN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Add Photo to Stream">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="O9L-F4-Svh" kind="show" identifier="addPhotosSegue" id="7JY-Mg-vxn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="6rS-Nc-d85" secondAttribute="trailing" id="2mG-SV-fda"/>
                             <constraint firstItem="6rS-Nc-d85" firstAttribute="top" secondItem="Qo2-XR-VMB" secondAttribute="bottom" id="6cd-VG-Pob"/>
+                            <constraint firstItem="1Mv-iL-m0m" firstAttribute="top" secondItem="6rS-Nc-d85" secondAttribute="bottom" constant="8" id="DLJ-2N-Kpa"/>
                             <constraint firstAttribute="trailing" secondItem="Qo2-XR-VMB" secondAttribute="trailing" id="EU1-nl-Qp5"/>
                             <constraint firstItem="bxR-nA-UWI" firstAttribute="trailing" secondItem="cD9-KH-mP4" secondAttribute="trailingMargin" id="IPx-W0-2Eh"/>
+                            <constraint firstItem="bxR-nA-UWI" firstAttribute="trailing" secondItem="cD9-KH-mP4" secondAttribute="trailingMargin" id="KpF-as-fhU"/>
                             <constraint firstAttribute="trailing" secondItem="WD4-eP-CLl" secondAttribute="trailing" id="Qv4-DN-dQ8"/>
+                            <constraint firstItem="1Mv-iL-m0m" firstAttribute="leading" secondItem="cD9-KH-mP4" secondAttribute="leadingMargin" id="ZoX-jJ-4bQ"/>
                             <constraint firstItem="WD4-eP-CLl" firstAttribute="top" secondItem="cD9-KH-mP4" secondAttribute="top" id="cDp-ML-6tq"/>
                             <constraint firstItem="6nn-tg-ezO" firstAttribute="top" secondItem="bxR-nA-UWI" secondAttribute="bottom" constant="20" id="gC0-86-Q8v"/>
+                            <constraint firstItem="bxR-nA-UWI" firstAttribute="top" secondItem="6rS-Nc-d85" secondAttribute="bottom" constant="8" id="l6I-El-OX9"/>
                             <constraint firstItem="6nn-tg-ezO" firstAttribute="top" secondItem="1Mv-iL-m0m" secondAttribute="bottom" constant="20" id="pfY-O3-zd8"/>
                             <constraint firstItem="Qo2-XR-VMB" firstAttribute="leading" secondItem="cD9-KH-mP4" secondAttribute="leading" id="r30-yM-Wkf"/>
                             <constraint firstItem="WD4-eP-CLl" firstAttribute="leading" secondItem="cD9-KH-mP4" secondAttribute="leading" id="rHC-h9-7RD"/>
@@ -608,6 +597,12 @@
                             <constraint firstItem="Qo2-XR-VMB" firstAttribute="top" secondItem="WD4-eP-CLl" secondAttribute="bottom" id="zK7-h4-xGZ"/>
                             <constraint firstItem="1Mv-iL-m0m" firstAttribute="leading" secondItem="cD9-KH-mP4" secondAttribute="leadingMargin" id="zvB-nH-Gw8"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="zvB-nH-Gw8"/>
+                                <exclude reference="IPx-W0-2Eh"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="AddPhotoButton" destination="1Mv-iL-m0m" id="a02-dc-LDh"/>
@@ -643,7 +638,7 @@
                                     <navigationItem title="Stream" id="9ND-Dd-O31">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="tSW-UY-8ET">
                                             <connections>
-                                                <segue destination="MYF-JU-dvH" kind="show" identifier="goToEvents" id="MvU-TO-zrO"/>
+                                                <segue destination="HMO-i8-oKz" kind="show" identifier="goToEvents" id="yOK-zZ-j4f"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1031,7 +1026,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VFg-NA-yBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1332" y="1183"/>
+            <point key="canvasLocation" x="700" y="1331"/>
         </scene>
     </scenes>
     <resources>
@@ -1043,11 +1038,10 @@
         <image name="user-icon" width="44" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="YLp-6U-xhM"/>
         <segue reference="ogT-83-hAH"/>
-        <segue reference="MvU-TO-zrO"/>
         <segue reference="2Hh-k9-rTi"/>
         <segue reference="34U-WB-9Ko"/>
         <segue reference="ac5-fG-lMU"/>
-        <segue reference="fdl-VX-pHU"/>
     </inferredMetricsTieBreakers>
 </document>

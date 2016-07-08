@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SplashScreenViewController: UIViewController, HolderViewDelegate {
     
@@ -14,6 +15,17 @@ class SplashScreenViewController: UIViewController, HolderViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Check if User is Signed in
+        FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
+            if let user = user {
+                
+                //User is Signed In
+                self.performSegueWithIdentifier("goToEventsSplash", sender: self)
+                print(user)
+                
+            }//Closes If
+        }//Closes FIRAuth.auth()?
     }
     
     override func viewDidAppear(animated: Bool) {

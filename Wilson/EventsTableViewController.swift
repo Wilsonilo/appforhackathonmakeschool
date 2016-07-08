@@ -7,15 +7,15 @@
 //
 
 import UIKit
-import SDWebImage
 import Firebase
 import SwiftyJSON
+import SDWebImage
 
 class EventsTableViewController: UITableViewController {
     
     @IBAction func logoutButtonTapped(sender: AnyObject) {
         try! FIRAuth.auth()?.signOut()
-        //self.performSegueWithIdentifier("logout", sender: <#T##AnyObject?#>)
+        self.performSegueWithIdentifier("logout", sender: self)
     }
     
     //Using Prototype Data

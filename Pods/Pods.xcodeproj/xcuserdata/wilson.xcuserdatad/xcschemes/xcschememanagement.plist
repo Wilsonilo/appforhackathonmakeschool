@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AlamofireImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Wilson.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,32 +52,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0F9A8DA5C7ADB3F38189293BA1911343</key>
+		<key>19E1F6588D6E92072A9A67790A2B43FE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2CBA64B8521AFCBA3B1E110C03C6DB82</key>
+		<key>24A017CB61085752C08FF3B5D82A2175</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>34260537904D2021F453F0A1FBD03925</key>
+		<key>513A574BD17C5A5CDAC571DE987B44B2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>42A9CB8B15BB1903EBD5FC41D761FBAC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5AFD44CB80C43827DD1A372DF06ACDC1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>60EA17D419C2EB23F7DEA79AA05EB91F</key>
+		<key>79288642CE508CB2A9991628C48446E8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,37 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>958A81B656541744252C79E61A3B96B4</key>
+		<key>C25AE8693AFBF8A9A7733C56CD2285AB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AD7813F7111B701E8FFE0C48FF56771A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AEC0E1B54E5773BCD774A84D1F1B43C3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D2FFF03E6859B03001B92E1494113A03</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D689ABE70995ED5ADAAC2ABFD1421EF6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DEBD398198E41176DE48503D66955B02</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FE2731814805A03124ACA3B5321315DC</key>
+		<key>E5C398EE97DF41574D104D5A5C582550</key>
 		<dict>
 			<key>primary</key>
 			<true/>

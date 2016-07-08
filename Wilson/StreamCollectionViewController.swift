@@ -11,6 +11,7 @@ import UIKit
 import Firebase
 import Spring
 import SwiftSpinner
+import SDWebImage
 
 
 private let reuseIdentifier = "Cell"

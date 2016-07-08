@@ -52,6 +52,10 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
         
         // Save image inside an independent Folder with a certain ID
         let imagesRef = storageImages.child(self.eventID)
+        
+        
+        
+        
         let imageRef = imagesRef.child("\(NSUUID().UUIDString).jpg")
         
         
@@ -129,7 +133,7 @@ class TakePhotoViewController: UIViewController,UIImagePickerControllerDelegate,
     //Prepare for Segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "goToStream" {
-            let streamCollection = segue.destinationViewController as! StreamCollectionViewController
+            let streamCollection = segue.destinationViewController as! TimeLineViewController
             
             //Send id to View Controller to save in metadata
             streamCollection.eventID = self.eventID

@@ -12,8 +12,6 @@ import UIKit
 import Firebase
 import Spring
 import SwiftSpinner
-import SDWebImage
-import UIActivityIndicator_for_SDWebImage
 import Alamofire
 import AlamofireImage
 
@@ -57,20 +55,11 @@ class TimeLineViewController: UIViewController {
             getData()
     }
     
+    //Generates Elements for Timeline
     func getData(){
         
-        //Generates Elements for Timeline
-        print("data called")
         //Get Ref of the selected Event.
-        let date = NSDate()
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyyMMddhhmmss"
-        let dateString = dateFormatter.stringFromDate(date)
-        var dateFinalReference:NSNumber = 0
-        if let number = Int(dateString) {
-            dateFinalReference = NSNumber(integer:number)
-        }
-        let imagesRef = FIRDatabase.database().reference().child("events/\(self.eventID)/").queryEndingAtValue(dateFinalReference, childKey: "date").queryOrderedByPriority()
+        let imagesRef = FIRDatabase.database().reference().child("events/\(self.eventID)/")
         imagesRef.observeSingleEventOfType(FIRDataEventType.Value, withBlock: { (snapshot) in
             
             print(snapshot.childrenCount)
