@@ -11,6 +11,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>AlamofireImage.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>Pods-Wilson.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -54,12 +59,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>05094CC4A047119F7ADC14EE74C4881C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0F9A8DA5C7ADB3F38189293BA1911343</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>19E1F6588D6E92072A9A67790A2B43FE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1BCD1A6B86771908855146186A755935</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>24A017CB61085752C08FF3B5D82A2175</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -84,12 +104,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>513A574BD17C5A5CDAC571DE987B44B2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>66E2DCC0D59E8E0D004B65D68175A4FF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>79288642CE508CB2A9991628C48446E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C25AE8693AFBF8A9A7733C56CD2285AB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -100,6 +135,11 @@
 			<true/>
 		</dict>
 		<key>DEBD398198E41176DE48503D66955B02</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E5C398EE97DF41574D104D5A5C582550</key>
 		<dict>
 			<key>primary</key>
 			<true/>
