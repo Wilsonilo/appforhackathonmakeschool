@@ -39,16 +39,18 @@ class LoginViewController: UIViewController {
 
             }//Closes If
         }//Closes FIRAuth.auth()?
-        registerForKeyboardNotifications()
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        
+        registerForKeyboardNotifications()
         
         inputEmail.delegate = self
         
         print(self.view.superview?.frame.origin.y)
     }//Closes Did Load
     
+    // Keyboard Did Appear
     func registerForKeyboardNotifications()
     {
         //Adding notifies on keyboard appearing
@@ -56,7 +58,7 @@ class LoginViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillBeHidden(_:)), name: UIKeyboardWillHideNotification, object: nil)
     }
     
-    
+    // Keyboard Did Leave
     func deregisterFromKeyboardNotifications()
     {
         //Removing notifies on keyboard appearing
