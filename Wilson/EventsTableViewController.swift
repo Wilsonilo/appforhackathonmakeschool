@@ -27,6 +27,7 @@ class EventsTableViewController: UITableViewController {
         super.viewDidLoad()
         getLatestLoans()
         
+        // Shift UITabbar Down
     }
 
     override func didReceiveMemoryWarning() {
